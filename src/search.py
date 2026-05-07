@@ -25,10 +25,27 @@ class Search:
         results = set.intersection(*page_sets)
 
         if results:
-            print("Found in pages:")
+
+            ranked_results = []
 
             for page in results:
-                print(page)
+
+                total_frequency = 0
+
+                for word in words:
+                    total_frequency += self.index[word][page]["frequency"]
+
+                ranked_results.append((page, total_frequency))
+
+            ranked_results.sort(
+                key=lambda x: x[1],
+                reverse=True
+            )
+
+            print("Found in pages:")
+
+            for page, score in ranked_results:
+                print(f"{page} (score: {score})")
 
         else:
             print("No matching pages.")

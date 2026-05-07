@@ -11,7 +11,7 @@ class Crawler:
 
     def crawl(self):
 
-        urls_to_visit = [self.base_url]
+        urls_to_visit = [self.base_url.rstrip("/")]
         visited_urls = set()
 
         pages = {}
@@ -27,6 +27,8 @@ class Crawler:
 
             try:
                 response = requests.get(current_url)
+
+                response.raise_for_status()
 
                 soup = BeautifulSoup(response.text, "html.parser")
 
@@ -63,9 +65,12 @@ class Crawler:
                             href
                         )
 
+                        full_url + full_url.rstrip("/")
+
                         if (
                             full_url.startswith(self.base_url)
-                            and full_url not in visited_urls
+                            and "#" not in full_url
+                             and full_url not in visited_urls
                             and full_url not in urls_to_visit
                         ):
                             urls_to_visit.append(full_url)
