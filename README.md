@@ -3,6 +3,13 @@
 A small Python crawler, indexer, and search utility for pages from
 `quotes.toscrape.com`.
 
+## Code quality
+
+The source modules include type hints, module documentation, class docstrings,
+method docstrings, and explicit data contracts for the inverted index. Core
+logic is split into focused methods for crawling, indexing, query parsing,
+ranking, suggestions, and phrase matching.
+
 ## Testing
 
 Install dependencies:

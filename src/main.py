@@ -1,9 +1,13 @@
+"""Command-line interface for building and querying the local search index."""
+
 from crawler import Crawler
 from indexer import Indexer
 from search import Search
 
 
-def main():
+def main() -> None:
+    """Run the interactive crawler/search prompt."""
+
     crawler = Crawler()
     indexer = Indexer()
 

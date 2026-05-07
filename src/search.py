@@ -1,15 +1,42 @@
+"""Search and query processing over an inverted index.
+
+The module supports ranked plain-term search, Boolean queries, quoted phrases,
+autocomplete, spelling suggestions, and TF-IDF scoring. It keeps reusable
+posting-list metadata in memory so repeated queries avoid unnecessary work.
+"""
+
 from bisect import bisect_left
 import difflib
 import math
 import re
+from typing import Literal, TypeAlias
 
 from nltk.stem import PorterStemmer
 
+try:
+    from .indexer import InvertedIndex
+except ImportError:  # pragma: no cover - supports direct ``python src/...`` use.
+    from indexer import InvertedIndex
+
 TOKEN_RE = re.compile(r"\b\w+\b")
 QUERY_TOKEN_RE = re.compile(r'"[^"]+"|\bAND\b|\bOR\b|\bNOT\b|\b\w+\b', re.I)
+Operator: TypeAlias = Literal["AND", "OR", "NOT"]
+QueryTerm: TypeAlias = tuple[Literal["TERM", "PHRASE"], str]
+QueryToken: TypeAlias = Operator | QueryTerm
+SearchResult: TypeAlias = tuple[str, float]
 
 
 class Search:
+    """Query engine for an inverted index.
+
+    Args:
+        index: Inverted index produced by :class:`indexer.Indexer`.
+
+    The constructor precomputes document sets, posting sets, document
+    frequencies, and IDF values. This makes query execution faster and keeps
+    ranking deterministic.
+    """
+
     STOP_WORDS = {
         "a",
         "an",
@@ -35,31 +62,33 @@ class Search:
     OPERATORS = {"AND", "OR", "NOT"}
     OPERATOR_PRECEDENCE = {"OR": 1, "AND": 2, "NOT": 3}
 
-    def __init__(self, index):
+    def __init__(self, index: InvertedIndex) -> None:
         self.index = index
         self.stemmer = PorterStemmer()
-        self.documents = {
+        self.documents: set[str] = {
             page
             for postings in self.index.values()
             for page in postings
         }
         self.total_documents = len(self.documents)
         self.vocabulary = sorted(self.index)
-        self.posting_pages = {
+        self.posting_pages: dict[str, set[str]] = {
             word: set(postings)
             for word, postings in self.index.items()
         }
-        self.document_frequencies = {
+        self.document_frequencies: dict[str, int] = {
             word: len(postings)
             for word, postings in self.index.items()
         }
-        self.idf_cache = {
+        self.idf_cache: dict[str, float] = {
             word: math.log((self.total_documents + 1) / (frequency + 1)) + 1
             for word, frequency in self.document_frequencies.items()
         }
-        self.phrase_cache = {}
+        self.phrase_cache: dict[tuple[str, ...], set[str]] = {}
 
-    def normalize_terms(self, text, remove_stop_words=True):
+    def normalize_terms(self, text: str, remove_stop_words: bool = True) -> list[str]:
+        """Tokenise, lowercase, optionally remove stop words, and stem text."""
+
         terms = TOKEN_RE.findall(text.lower())
 
         if remove_stop_words:
@@ -67,7 +96,9 @@ class Search:
 
         return [self.stemmer.stem(term) for term in terms]
 
-    def autocomplete(self, prefix, limit=5):
+    def autocomplete(self, prefix: str, limit: int = 5) -> list[str]:
+        """Return indexed terms that start with the normalised prefix."""
+
         normalized = self.normalize_terms(prefix, remove_stop_words=False)
 
         if not normalized:
@@ -75,7 +106,7 @@ class Search:
 
         prefix = normalized[-1]
         start = bisect_left(self.vocabulary, prefix)
-        suggestions = []
+        suggestions: list[str] = []
 
         for word in self.vocabulary[start:]:
             if not word.startswith(prefix) or len(suggestions) >= limit:
@@ -85,8 +116,10 @@ class Search:
 
         return suggestions
 
-    def suggest_corrections(self, query, limit=5):
-        suggestions = []
+    def suggest_corrections(self, query: str, limit: int = 5) -> list[str]:
+        """Suggest close indexed terms for misspelled query terms."""
+
+        suggestions: list[str] = []
 
         for word in self.normalize_terms(query):
             if word in self.index:
@@ -108,7 +141,9 @@ class Search:
 
         return suggestions[:limit]
 
-    def inverse_document_frequency(self, word):
+    def inverse_document_frequency(self, word: str) -> float:
+        """Return smoothed inverse document frequency for a term."""
+
         if word not in self.idf_cache:
             document_frequency = self.document_frequencies.get(word, 0)
             self.idf_cache[word] = (
@@ -117,7 +152,9 @@ class Search:
 
         return self.idf_cache[word]
 
-    def tf_idf_score(self, page, words):
+    def tf_idf_score(self, page: str, words: list[str]) -> float:
+        """Return the TF-IDF score for a page over the supplied terms."""
+
         score = 0
 
         for word in words:
@@ -126,7 +163,9 @@ class Search:
 
         return score
 
-    def pages_for_phrase(self, phrase):
+    def pages_for_phrase(self, phrase: str) -> set[str]:
+        """Return pages where all phrase terms appear in adjacent positions."""
+
         words = self.normalize_terms(phrase)
 
         cache_key = tuple(words)
@@ -159,7 +198,9 @@ class Search:
         self.phrase_cache[cache_key] = matching_pages
         return matching_pages.copy()
 
-    def phrase_search(self, phrase):
+    def phrase_search(self, phrase: str) -> list[SearchResult]:
+        """Run a quoted phrase query and print matching ranked pages."""
+
         words = self.normalize_terms(phrase)
         results = self.pages_for_phrase(phrase)
         ranked_results = self.rank_pages(results, words)
@@ -176,9 +217,11 @@ class Search:
 
         return ranked_results
 
-    def tokenize_query(self, query):
+    def tokenize_query(self, query: str) -> list[QueryToken]:
+        """Convert raw query text into Boolean operators, terms, and phrases."""
+
         raw_tokens = QUERY_TOKEN_RE.findall(query)
-        tokens = []
+        tokens: list[QueryToken] = []
 
         for token in raw_tokens:
             upper_token = token.upper()
@@ -198,9 +241,11 @@ class Search:
 
         return tokens
 
-    def to_postfix(self, tokens):
-        output = []
-        operators = []
+    def to_postfix(self, tokens: list[QueryToken]) -> list[QueryToken]:
+        """Convert infix Boolean tokens to postfix using operator precedence."""
+
+        output: list[QueryToken] = []
+        operators: list[Operator] = []
 
         for token in tokens:
             if isinstance(token, tuple):
@@ -218,8 +263,10 @@ class Search:
         output.extend(reversed(operators))
         return output
 
-    def evaluate_postfix(self, postfix):
-        stack = []
+    def evaluate_postfix(self, postfix: list[QueryToken]) -> set[str]:
+        """Evaluate postfix Boolean tokens into a set of matching pages."""
+
+        stack: list[set[str]] = []
 
         for token in postfix:
             if isinstance(token, tuple):
@@ -255,8 +302,10 @@ class Search:
 
         return stack[0]
 
-    def positive_query_terms(self, tokens):
-        words = []
+    def positive_query_terms(self, tokens: list[QueryToken]) -> list[str]:
+        """Return non-negated terms that should contribute to ranking."""
+
+        words: list[str] = []
         negated = False
 
         for token in tokens:
@@ -275,7 +324,9 @@ class Search:
 
         return [word for word in words if word in self.index]
 
-    def intersect_postings(self, words):
+    def intersect_postings(self, words: list[str]) -> set[str]:
+        """Intersect posting lists, starting with the rarest term."""
+
         if not words:
             return set()
 
@@ -290,7 +341,9 @@ class Search:
 
         return results
 
-    def rank_pages(self, pages, words):
+    def rank_pages(self, pages: set[str], words: list[str]) -> list[SearchResult]:
+        """Rank pages by TF-IDF score and page name for deterministic ties."""
+
         ranked_results = [
             (page, self.tf_idf_score(page, [word for word in words if page in self.index[word]]))
             for page in pages
@@ -298,7 +351,18 @@ class Search:
         ranked_results.sort(key=lambda x: (-x[1], x[0]))
         return ranked_results
 
-    def score_page_for_tokens(self, page, tokens, phrase_matches=None):
+    def score_page_for_tokens(
+        self,
+        page: str,
+        tokens: list[QueryToken],
+        phrase_matches: dict[str, set[str]] | None = None,
+    ) -> float:
+        """Score one page for a parsed Boolean query.
+
+        Terms and phrases that are directly negated with ``NOT`` do not
+        contribute to ranking.
+        """
+
         phrase_matches = phrase_matches or {}
         score = 0
         negated = False
@@ -325,7 +389,13 @@ class Search:
 
         return score
 
-    def rank_pages_for_tokens(self, pages, tokens):
+    def rank_pages_for_tokens(
+        self,
+        pages: set[str],
+        tokens: list[QueryToken],
+    ) -> list[SearchResult]:
+        """Rank Boolean-query results, including phrase-aware scoring."""
+
         phrase_matches = {
             token[1]: self.pages_for_phrase(token[1])
             for token in tokens
@@ -338,7 +408,9 @@ class Search:
         ranked_results.sort(key=lambda x: (-x[1], x[0]))
         return ranked_results
 
-    def print_word(self, word):
+    def print_word(self, word: str) -> None:
+        """Print index statistics for one term."""
+
         word = word.lower()
 
         word = self.stemmer.stem(word)
@@ -367,7 +439,14 @@ class Search:
 
         print(f"Total occurrences across all pages: {total_frequency}")
 
-    def find(self, query):
+    def find(self, query: str) -> list[SearchResult]:
+        """Run a user query and return ranked ``(page, score)`` results.
+
+        Supported query forms include plain term searches, quoted phrases, and
+        Boolean expressions with ``AND``, ``OR``, and ``NOT``. Plain multi-term
+        queries retain the original project behaviour of requiring all terms.
+        """
+
         tokens = self.tokenize_query(query)
 
         if not tokens:
