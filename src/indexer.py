@@ -24,7 +24,7 @@ class Indexer:
 
                 self.index[word][url]["frequency"] += 1
                 self.index[word][url]["positions"].append(position)
-                print(f"Indexed {len(self.index)} unique words.")
+        print(f"Indexed {len(self.index)} unique words.")
 
     def save_index(self, filename="data/index.json"):
         with open(filename, "w") as f:
