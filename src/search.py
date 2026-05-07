@@ -1,6 +1,10 @@
+from nltk.stem import PorterStemmer
+
+
 class Search:
     def __init__(self, index):
         self.index = index
+        self.stemmer = PorterStemmer()
 
     def print_word(self, word):
         word = word.lower()
@@ -9,6 +13,8 @@ class Search:
             def print_word(self, word):
 
                 word = word.lower()
+
+                word = self.stemmer.stem(word)
 
                 if word not in self.index:
                     print("Word not found.")
@@ -37,7 +43,10 @@ class Search:
             print("Word not found.")
 
     def find(self, query):
-        words = query.lower().split()
+        words = [
+            self.stemmer.stem(word)
+            for word in query.lower().split()
+        ]
 
         page_sets = []
 

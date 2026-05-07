@@ -1,10 +1,12 @@
 import json
 import re
+from nltk.stem import PorterStemmer
 
 
 class Indexer:
     def __init__(self):
         self.index = {}
+        self.stemmer = PorterStemmer()
 
     def build_index(self, pages):
         for url, text in pages.items():
@@ -12,6 +14,8 @@ class Indexer:
             words = re.findall(r"\b\w+\b", text.lower())
 
             for position, word in enumerate(words):
+
+                word = self.stemmer.stem(word)
 
                 if word not in self.index:
                     self.index[word] = {}
