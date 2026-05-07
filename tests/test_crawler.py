@@ -1,7 +1,7 @@
 from unittest.mock import Mock
 import requests
 
-from crawler import Crawler
+from crawler import Crawler, format_elapsed_time
 
 
 class FakeResponse:
@@ -145,6 +145,24 @@ def test_crawl_uses_configured_delay(monkeypatch):
     crawler.crawl()
 
     sleep.assert_called_once_with(0.25)
+
+
+def test_crawl_prints_elapsed_time_summary(monkeypatch, capsys):
+    monkeypatch.setattr("crawler.time.perf_counter", Mock(side_effect=[10, 1330]))
+    session = FakeSession({"https://example.test": FakeResponse(quote_page())})
+    crawler = Crawler(base_url="https://example.test", session=session, delay=0)
+
+    crawler.crawl()
+
+    output = capsys.readouterr().out
+    assert "CRAWLING COMPLETE" in output
+    assert "1 pages crawled in 22 minutes" in output
+
+
+def test_format_elapsed_time_handles_seconds_minutes_and_hours():
+    assert format_elapsed_time(1) == "1 second"
+    assert format_elapsed_time(62) == "1 minute 2 seconds"
+    assert format_elapsed_time(7320) == "2 hours 2 minutes"
 
 
 def test_crawl_propagates_malformed_quote_markup_as_logged_error(capsys):

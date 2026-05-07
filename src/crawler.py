@@ -4,6 +4,25 @@ from bs4 import BeautifulSoup
 import time
 
 
+def format_elapsed_time(seconds):
+    seconds = int(round(seconds))
+    hours, remainder = divmod(seconds, 3600)
+    minutes, seconds = divmod(remainder, 60)
+
+    parts = []
+
+    if hours:
+        parts.append(f"{hours} hour{'s' if hours != 1 else ''}")
+
+    if minutes:
+        parts.append(f"{minutes} minute{'s' if minutes != 1 else ''}")
+
+    if seconds or not parts:
+        parts.append(f"{seconds} second{'s' if seconds != 1 else ''}")
+
+    return " ".join(parts)
+
+
 class Crawler:
     def __init__(
         self,
@@ -18,6 +37,7 @@ class Crawler:
         self.max_pages = max_pages
 
     def crawl(self):
+        start_time = time.perf_counter()
 
         urls_to_visit = deque([self.base_url])
         queued_urls = {self.base_url}
@@ -100,10 +120,9 @@ class Crawler:
             except Exception as e:
                 print(f"Error crawling {current_url}: {e}")
 
-
-        print(f"\nTotal pages crawled: {len(pages)}")
+        elapsed_time = format_elapsed_time(time.perf_counter() - start_time)
 
         print("\nCRAWLING COMPLETE")
-        print(f"Total pages crawled: {len(visited_urls)}")
+        print(f"{len(visited_urls)} pages crawled in {elapsed_time}")
 
         return pages

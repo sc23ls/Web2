@@ -26,6 +26,10 @@ pytest --cov=src --cov-report=term-missing --cov-fail-under=90
 The crawler tests use mocked HTTP responses, so they do not depend on live
 network access or the availability of the target site.
 
+See `docs/testing_strategy.md` for the documented testing strategy, including
+test types, mocked crawler testing, covered edge cases, coverage policy, CI, and
+the distinction between tests and benchmarks.
+
 ## Search features
 
 Search supports TF-IDF ranking, stop-word filtering, stemming, quoted phrase
