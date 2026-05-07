@@ -1,3 +1,5 @@
+import math
+
 from nltk.stem import PorterStemmer
 
 
@@ -5,6 +7,26 @@ class Search:
     def __init__(self, index):
         self.index = index
         self.stemmer = PorterStemmer()
+        self.total_documents = len(
+            {
+                page
+                for postings in self.index.values()
+                for page in postings
+            }
+        )
+
+    def inverse_document_frequency(self, word):
+        document_frequency = len(self.index.get(word, {}))
+        return math.log((self.total_documents + 1) / (document_frequency + 1)) + 1
+
+    def tf_idf_score(self, page, words):
+        score = 0
+
+        for word in words:
+            frequency = self.index[word][page]["frequency"]
+            score += frequency * self.inverse_document_frequency(word)
+
+        return score
 
     def print_word(self, word):
         word = word.lower()
@@ -64,23 +86,16 @@ class Search:
             ranked_results = []
 
             for page in results:
-
-                total_frequency = 0
-
-                for word in words:
-                    total_frequency += self.index[word][page]["frequency"]
-
-                ranked_results.append((page, total_frequency))
+                ranked_results.append((page, self.tf_idf_score(page, words)))
 
             ranked_results.sort(
-                key=lambda x: x[1],
-                reverse=True
+                key=lambda x: (-x[1], x[0])
             )
 
             print("Found in pages:")
 
             for page, score in ranked_results:
-                print(f"{page} (score: {score})")
+                print(f"{page} (score: {score:.4f})")
 
             return ranked_results
 
