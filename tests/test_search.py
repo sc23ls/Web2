@@ -1,4 +1,9 @@
-from src.search import Search
+import sys
+import os
+
+sys.path.append(os.path.abspath("src"))
+
+from search import Search
 
 
 def test_find():

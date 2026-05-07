@@ -1,4 +1,9 @@
-from src.indexer import Indexer
+import sys
+import os
+
+sys.path.append(os.path.abspath("src"))
+
+from indexer import Indexer
 
 
 def test_build_index():

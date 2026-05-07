@@ -1,4 +1,9 @@
-from src.crawler import Crawler
+import sys
+import os
+
+sys.path.append(os.path.abspath("src"))
+
+from crawler import Crawler
 
 
 def test_crawl():

@@ -2,38 +2,77 @@ import requests
 from bs4 import BeautifulSoup
 import time
 
+from requests.compat import quote
+
 
 class Crawler:
     def __init__(self):
         self.base_url = "https://quotes.toscrape.com"
 
     def crawl(self):
-        current_url = self.base_url
+
+        urls_to_visit = [self.base_url]
+        visited_urls = set()
+
         pages = {}
 
-        while current_url:
+        while urls_to_visit:
+
+            current_url = urls_to_visit.pop(0)
+
+            if current_url in visited_urls:
+                continue
+
             print(f"Crawling: {current_url}")
 
-            response = requests.get(current_url)
-            soup = BeautifulSoup(response.text, "html.parser")
+            try:
+                response = requests.get(current_url)
 
-            quotes = soup.find_all("span", class_="text")
+                soup = BeautifulSoup(response.text, "html.parser")
 
-            page_text = ""
+                quotes = soup.find_all("div", class_="quote")
 
-            for quote in quotes:
-                page_text += quote.get_text() + " "
+                page_text = ""
 
-            pages[current_url] = page_text
+                for quote in quotes:
 
-            next_button = soup.find("li", class_="next")
+                    quote_text = quote.find("span", class_="text").get_text()
 
-            if next_button:
-                next_link = next_button.find("a")["href"]
-                current_url = self.base_url + next_link
-            else:
-                current_url = None
+                    author = quote.find("small", class_="author").get_text()
 
-            time.sleep(6)
+                    tags = quote.find_all("a", class_="tag")
+
+                    tag_text = " ".join(tag.get_text() for tag in tags)
+
+                    page_text += f"{quote_text} {author} {tag_text} "
+
+                pages[current_url] = page_text
+
+                visited_urls.add(current_url)
+
+                links = soup.find_all("a")
+
+                for link in links:
+
+                    href = link.get("href")
+
+                    if href:
+
+                        full_url = requests.compat.urljoin(
+                            self.base_url,
+                            href
+                        )
+
+                        if (
+                            full_url.startswith(self.base_url)
+                            and full_url not in visited_urls
+                            and full_url not in urls_to_visit
+                        ):
+                            urls_to_visit.append(full_url)
+
+                time.sleep(1)
+
+            except Exception as e:
+                print(f"Error crawling {current_url}: {e}")
 
         return pages
