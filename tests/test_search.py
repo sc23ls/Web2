@@ -19,3 +19,11 @@ def test_find():
     search = Search(index)
 
     assert "hello" in search.index
+
+def test_missing_word():
+
+    index = {}
+
+    search = Search(index)
+
+    assert "missing" not in search.index

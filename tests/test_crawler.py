@@ -12,3 +12,12 @@ def test_crawl():
     pages = crawler.crawl()
 
     assert len(pages) > 0
+
+def test_pages_are_strings():
+
+    crawler = Crawler()
+
+    pages = crawler.crawl()
+
+    for text in pages.values():
+        assert isinstance(text, str)
