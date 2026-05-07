@@ -1,32 +1,76 @@
-import sys
-import os
-
-sys.path.append(os.path.abspath("src"))
+import json
 
 from indexer import Indexer
 
 
-def test_build_index():
+def test_build_index_tracks_frequency_positions_and_multiple_pages():
     pages = {
-        "page1": "hello world hello"
+        "page1": "hello world hello",
+        "page2": "world hello",
     }
-
     indexer = Indexer()
 
     indexer.build_index(pages)
 
-    assert "hello" in indexer.index
-
-    assert indexer.index["hello"]["page1"]["frequency"] == 2
-
-def test_case_insensitive():
-
-    pages = {
-        "page1": "Hello hello HELLO"
+    assert indexer.index["hello"]["page1"] == {
+        "frequency": 2,
+        "positions": [0, 2],
     }
+    assert indexer.index["hello"]["page2"] == {
+        "frequency": 1,
+        "positions": [1],
+    }
+    assert indexer.index["world"]["page1"]["positions"] == [1]
 
+
+def test_build_index_is_case_insensitive_and_strips_punctuation():
+    pages = {"page1": "Hello, hello! HELLO? world-class"}
     indexer = Indexer()
 
     indexer.build_index(pages)
 
-    assert indexer.index["hello"]["page1"]["frequency"] == 3 
+    assert indexer.index["hello"]["page1"]["frequency"] == 3
+    assert indexer.index["world"]["page1"]["positions"] == [3]
+    assert indexer.index["class"]["page1"]["positions"] == [4]
+
+
+def test_build_index_stems_related_words_to_same_term():
+    pages = {"page1": "running runs runner"}
+    indexer = Indexer()
+
+    indexer.build_index(pages)
+
+    assert indexer.index["run"]["page1"] == {
+        "frequency": 2,
+        "positions": [0, 1],
+    }
+    assert indexer.index["runner"]["page1"] == {
+        "frequency": 1,
+        "positions": [2],
+    }
+
+
+def test_build_index_accumulates_when_called_multiple_times():
+    indexer = Indexer()
+
+    indexer.build_index({"page1": "alpha"})
+    indexer.build_index({"page2": "alpha beta"})
+
+    assert set(indexer.index["alpha"]) == {"page1", "page2"}
+    assert indexer.index["beta"]["page2"]["frequency"] == 1
+
+
+def test_save_and_load_index_round_trip(tmp_path):
+    index_file = tmp_path / "index.json"
+    indexer = Indexer()
+    indexer.build_index({"page1": "hello hello"})
+
+    indexer.save_index(index_file)
+
+    assert json.loads(index_file.read_text()) == indexer.index
+
+    loaded = Indexer()
+    result = loaded.load_index(index_file)
+
+    assert result == indexer.index
+    assert loaded.index == indexer.index

@@ -2,21 +2,30 @@ import requests
 from bs4 import BeautifulSoup
 import time
 
-from requests.compat import quote
-
 
 class Crawler:
-    def __init__(self):
-        self.base_url = "https://quotes.toscrape.com"
+    def __init__(
+        self,
+        base_url="https://quotes.toscrape.com",
+        session=None,
+        delay=1,
+        max_pages=None,
+    ):
+        self.base_url = base_url.rstrip("/")
+        self.session = session or requests
+        self.delay = delay
+        self.max_pages = max_pages
 
     def crawl(self):
 
-        urls_to_visit = [self.base_url.rstrip("/")]
+        urls_to_visit = [self.base_url]
         visited_urls = set()
 
         pages = {}
 
         while urls_to_visit:
+            if self.max_pages is not None and len(visited_urls) >= self.max_pages:
+                break
 
             current_url = urls_to_visit.pop(0)
 
@@ -29,7 +38,7 @@ class Crawler:
             print(f"Visited pages: {len(visited_urls)}")
 
             try:
-                response = requests.get(current_url)
+                response = self.session.get(current_url, timeout=10)
 
                 response.raise_for_status()
 
@@ -71,19 +80,18 @@ class Crawler:
                         full_url = requests.compat.urljoin(
                             self.base_url,
                             href
-                        )
-
-                        full_url + full_url.rstrip("/")
+                        ).rstrip("/")
 
                         if (
                             full_url.startswith(self.base_url)
                             and "#" not in full_url
-                             and full_url not in visited_urls
+                            and full_url not in visited_urls
                             and full_url not in urls_to_visit
                         ):
                             urls_to_visit.append(full_url)
 
-                time.sleep(1)
+                if self.delay:
+                    time.sleep(self.delay)
 
             except Exception as e:
                 print(f"Error crawling {current_url}: {e}")

@@ -9,44 +9,41 @@ class Search:
     def print_word(self, word):
         word = word.lower()
 
-        if word in self.index:
-            def print_word(self, word):
+        word = self.stemmer.stem(word)
 
-                word = word.lower()
-
-                word = self.stemmer.stem(word)
-
-                if word not in self.index:
-                    print("Word not found.")
-                    return
-
-                postings = self.index[word]
-
-                print(f"\nWord: '{word}'")
-                print(f"Appears on {len(postings)} pages.\n")
-
-                total_frequency = 0
-
-                for page, stats in postings.items():
-
-                    frequency = stats["frequency"]
-
-                    total_frequency += frequency
-
-                    print(f"{page}")
-                    print(f"  Frequency: {frequency}")
-                    print(f"  Positions: {stats['positions']}")
-                    print()
-
-                print(f"Total occurrences across all pages: {total_frequency}")
-        else:
+        if word not in self.index:
             print("Word not found.")
+            return
+
+        postings = self.index[word]
+
+        print(f"\nWord: '{word}'")
+        print(f"Appears on {len(postings)} pages.\n")
+
+        total_frequency = 0
+
+        for page, stats in postings.items():
+
+            frequency = stats["frequency"]
+
+            total_frequency += frequency
+
+            print(f"{page}")
+            print(f"  Frequency: {frequency}")
+            print(f"  Positions: {stats['positions']}")
+            print()
+
+        print(f"Total occurrences across all pages: {total_frequency}")
 
     def find(self, query):
         words = [
             self.stemmer.stem(word)
             for word in query.lower().split()
         ]
+
+        if not words:
+            print("No results found.")
+            return []
 
         page_sets = []
 
@@ -55,7 +52,7 @@ class Search:
                 page_sets.append(set(self.index[word].keys()))
             else:
                 print("No results found.")
-                return
+                return []
 
         results = set.intersection(*page_sets)
 
@@ -85,5 +82,8 @@ class Search:
             for page, score in ranked_results:
                 print(f"{page} (score: {score})")
 
+            return ranked_results
+
         else:
             print("No matching pages.")
+            return []
