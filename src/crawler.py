@@ -1,3 +1,4 @@
+from collections import deque
 import requests
 from bs4 import BeautifulSoup
 import time
@@ -18,7 +19,8 @@ class Crawler:
 
     def crawl(self):
 
-        urls_to_visit = [self.base_url]
+        urls_to_visit = deque([self.base_url])
+        queued_urls = {self.base_url}
         visited_urls = set()
 
         pages = {}
@@ -27,7 +29,8 @@ class Crawler:
             if self.max_pages is not None and len(visited_urls) >= self.max_pages:
                 break
 
-            current_url = urls_to_visit.pop(0)
+            current_url = urls_to_visit.popleft()
+            queued_urls.discard(current_url)
 
             if current_url in visited_urls:
                 continue
@@ -86,9 +89,10 @@ class Crawler:
                             full_url.startswith(self.base_url)
                             and "#" not in full_url
                             and full_url not in visited_urls
-                            and full_url not in urls_to_visit
+                            and full_url not in queued_urls
                         ):
                             urls_to_visit.append(full_url)
+                            queued_urls.add(full_url)
 
                 if self.delay:
                     time.sleep(self.delay)

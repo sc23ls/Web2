@@ -2,6 +2,8 @@ import json
 import re
 from nltk.stem import PorterStemmer
 
+TOKEN_RE = re.compile(r"\b\w+\b")
+
 
 class Indexer:
     def __init__(self):
@@ -11,7 +13,7 @@ class Indexer:
     def build_index(self, pages):
         for url, text in pages.items():
 
-            words = re.findall(r"\b\w+\b", text.lower())
+            words = TOKEN_RE.findall(text.lower())
 
             for position, word in enumerate(words):
 

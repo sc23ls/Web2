@@ -42,6 +42,22 @@ life OR humor
 life AND NOT death
 ```
 
+## Performance
+
+The crawler and search engine use optimised data structures for their hot paths:
+`deque` queueing for crawls, set-based URL and posting-list operations, cached
+IDF values, smallest-first posting intersections, phrase-result caching, and
+binary-search autocomplete.
+
+Run repeatable synthetic benchmarks:
+
+```bash
+python benchmarks/benchmark_search.py --pages 5000 --words-per-page 80 --vocabulary 2000 --repeat 5
+```
+
+See `docs/complexity.md` for Big-O complexity analysis of crawling, indexing,
+query evaluation, phrase search, TF-IDF ranking, autocomplete, and suggestions.
+
 ## Automation
 
 GitHub Actions runs the test suite on Python 3.10, 3.11, and 3.12 for pushes,
