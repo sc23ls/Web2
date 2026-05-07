@@ -1,19 +1,90 @@
+import difflib
 import math
+import re
 
 from nltk.stem import PorterStemmer
 
 
 class Search:
+    STOP_WORDS = {
+        "a",
+        "an",
+        "and",
+        "are",
+        "as",
+        "at",
+        "be",
+        "by",
+        "for",
+        "from",
+        "in",
+        "is",
+        "it",
+        "of",
+        "on",
+        "or",
+        "that",
+        "the",
+        "to",
+        "with",
+    }
+    OPERATORS = {"AND", "OR", "NOT"}
+    OPERATOR_PRECEDENCE = {"OR": 1, "AND": 2, "NOT": 3}
+
     def __init__(self, index):
         self.index = index
         self.stemmer = PorterStemmer()
-        self.total_documents = len(
-            {
-                page
-                for postings in self.index.values()
-                for page in postings
-            }
-        )
+        self.documents = {
+            page
+            for postings in self.index.values()
+            for page in postings
+        }
+        self.total_documents = len(self.documents)
+        self.vocabulary = sorted(self.index)
+
+    def normalize_terms(self, text, remove_stop_words=True):
+        terms = re.findall(r"\b\w+\b", text.lower())
+
+        if remove_stop_words:
+            terms = [term for term in terms if term not in self.STOP_WORDS]
+
+        return [self.stemmer.stem(term) for term in terms]
+
+    def autocomplete(self, prefix, limit=5):
+        normalized = self.normalize_terms(prefix, remove_stop_words=False)
+
+        if not normalized:
+            return []
+
+        prefix = normalized[-1]
+        return [
+            word
+            for word in self.vocabulary
+            if word.startswith(prefix)
+        ][:limit]
+
+    def suggest_corrections(self, query, limit=5):
+        suggestions = []
+
+        for word in self.normalize_terms(query):
+            if word in self.index:
+                continue
+
+            suggestions.extend(
+                match
+                for match in difflib.get_close_matches(
+                    word,
+                    self.vocabulary,
+                    n=limit,
+                    cutoff=0.72,
+                )
+                if match not in suggestions
+            )
+
+            if len(suggestions) >= limit:
+                break
+
+        return suggestions[:limit]
 
     def inverse_document_frequency(self, word):
         document_frequency = len(self.index.get(word, {}))
@@ -27,6 +98,192 @@ class Search:
             score += frequency * self.inverse_document_frequency(word)
 
         return score
+
+    def pages_for_phrase(self, phrase):
+        words = self.normalize_terms(phrase)
+
+        if not words or any(word not in self.index for word in words):
+            return set()
+
+        candidate_pages = set.intersection(
+            *(set(self.index[word].keys()) for word in words)
+        )
+        matching_pages = set()
+
+        for page in candidate_pages:
+            first_positions = self.index[words[0]][page]["positions"]
+            other_positions = [
+                set(self.index[word][page]["positions"])
+                for word in words[1:]
+            ]
+
+            for position in first_positions:
+                if all(
+                    position + offset + 1 in positions
+                    for offset, positions in enumerate(other_positions)
+                ):
+                    matching_pages.add(page)
+                    break
+
+        return matching_pages
+
+    def phrase_search(self, phrase):
+        words = self.normalize_terms(phrase)
+        results = self.pages_for_phrase(phrase)
+        ranked_results = self.rank_pages(results, words)
+
+        if ranked_results:
+            print(f"\nPhrase: \"{phrase}\"")
+            print(f"Matching pages: {len(ranked_results)}\n")
+            print("Found in pages:")
+
+            for page, score in ranked_results:
+                print(f"{page} (score: {score:.4f})")
+        else:
+            print("No matching pages.")
+
+        return ranked_results
+
+    def tokenize_query(self, query):
+        raw_tokens = re.findall(r'"[^"]+"|\bAND\b|\bOR\b|\bNOT\b|\b\w+\b', query, re.I)
+        tokens = []
+
+        for token in raw_tokens:
+            upper_token = token.upper()
+
+            if upper_token in self.OPERATORS:
+                tokens.append(upper_token)
+            elif token.startswith('"') and token.endswith('"'):
+                phrase = token[1:-1]
+
+                if self.normalize_terms(phrase):
+                    tokens.append(("PHRASE", phrase))
+            else:
+                words = self.normalize_terms(token)
+
+                if words:
+                    tokens.append(("TERM", words[0]))
+
+        return tokens
+
+    def to_postfix(self, tokens):
+        output = []
+        operators = []
+
+        for token in tokens:
+            if isinstance(token, tuple):
+                output.append(token)
+                continue
+
+            while (
+                operators
+                and self.OPERATOR_PRECEDENCE[operators[-1]] >= self.OPERATOR_PRECEDENCE[token]
+            ):
+                output.append(operators.pop())
+
+            operators.append(token)
+
+        output.extend(reversed(operators))
+        return output
+
+    def evaluate_postfix(self, postfix):
+        stack = []
+
+        for token in postfix:
+            if isinstance(token, tuple):
+                kind, value = token
+
+                if kind == "TERM":
+                    stack.append(set(self.index.get(value, {})))
+                else:
+                    stack.append(self.pages_for_phrase(value))
+
+                continue
+
+            if token == "NOT":
+                if not stack:
+                    return set()
+
+                stack.append(self.documents - stack.pop())
+                continue
+
+            if len(stack) < 2:
+                return set()
+
+            right = stack.pop()
+            left = stack.pop()
+
+            if token == "AND":
+                stack.append(left & right)
+            elif token == "OR":
+                stack.append(left | right)
+
+        if len(stack) != 1:
+            return set()
+
+        return stack[0]
+
+    def positive_query_terms(self, tokens):
+        words = []
+        negated = False
+
+        for token in tokens:
+            if token == "NOT":
+                negated = True
+                continue
+
+            if token in {"AND", "OR"}:
+                continue
+
+            if not negated:
+                kind, value = token
+                words.extend([value] if kind == "TERM" else self.normalize_terms(value))
+
+            negated = False
+
+        return [word for word in words if word in self.index]
+
+    def rank_pages(self, pages, words):
+        ranked_results = [
+            (page, self.tf_idf_score(page, [word for word in words if page in self.index[word]]))
+            for page in pages
+        ]
+        ranked_results.sort(key=lambda x: (-x[1], x[0]))
+        return ranked_results
+
+    def score_page_for_tokens(self, page, tokens):
+        score = 0
+        negated = False
+
+        for token in tokens:
+            if token == "NOT":
+                negated = True
+                continue
+
+            if token in {"AND", "OR"}:
+                continue
+
+            if negated:
+                negated = False
+                continue
+
+            kind, value = token
+
+            if kind == "TERM":
+                if page in self.index.get(value, {}):
+                    score += self.tf_idf_score(page, [value])
+            elif page in self.pages_for_phrase(value):
+                score += self.tf_idf_score(page, self.normalize_terms(value))
+
+        return score
+
+    def rank_pages_for_tokens(self, pages, tokens):
+        ranked_results = [
+            (page, self.score_page_for_tokens(page, tokens))
+            for page in pages
+        ]
+        ranked_results.sort(key=lambda x: (-x[1], x[0]))
+        return ranked_results
 
     def print_word(self, word):
         word = word.lower()
@@ -58,39 +315,47 @@ class Search:
         print(f"Total occurrences across all pages: {total_frequency}")
 
     def find(self, query):
-        words = [
-            self.stemmer.stem(word)
-            for word in query.lower().split()
-        ]
+        tokens = self.tokenize_query(query)
 
-        if not words:
+        if not tokens:
             print("No results found.")
             return []
 
-        page_sets = []
+        has_boolean_operator = any(token in self.OPERATORS for token in tokens)
 
-        for word in words:
-            if word in self.index:
-                page_sets.append(set(self.index[word].keys()))
-            else:
+        if not has_boolean_operator and len(tokens) == 1 and tokens[0][0] == "PHRASE":
+            return self.phrase_search(tokens[0][1])
+
+        if has_boolean_operator:
+            words = self.positive_query_terms(tokens)
+
+            if not words:
                 print("No results found.")
                 return []
 
-        results = set.intersection(*page_sets)
+            results = self.evaluate_postfix(self.to_postfix(tokens))
+            ranked_results = self.rank_pages_for_tokens(results, tokens)
+        else:
+            words = [token[1] for token in tokens]
+
+            missing_words = [word for word in words if word not in self.index]
+
+            if missing_words:
+                suggestions = self.suggest_corrections(query)
+                print("No results found.")
+
+                if suggestions:
+                    print(f"Did you mean: {', '.join(suggestions)}?")
+
+                return []
+
+            results = set.intersection(*(set(self.index[word].keys()) for word in words))
+            ranked_results = self.rank_pages(results, words)
 
         if results:
 
             print(f"\nQuery: '{query}'")
             print(f"Matching pages: {len(results)}\n")
-
-            ranked_results = []
-
-            for page in results:
-                ranked_results.append((page, self.tf_idf_score(page, words)))
-
-            ranked_results.sort(
-                key=lambda x: (-x[1], x[0])
-            )
 
             print("Found in pages:")
 

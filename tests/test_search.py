@@ -42,6 +42,35 @@ def test_find_stems_query_terms_before_lookup():
     assert search.find("running") == [("page1", 2.0)]
 
 
+def test_find_filters_stop_words_from_plain_queries():
+    search = Search({"hello": {"page1": {"frequency": 1, "positions": [0]}}})
+
+    assert search.find("the hello") == [("page1", 1.0)]
+
+
+def test_autocomplete_returns_index_terms_for_stemmed_prefixes():
+    search = Search(
+        {
+            "inspir": {"page1": {"frequency": 1, "positions": [0]}},
+            "insight": {"page1": {"frequency": 1, "positions": [1]}},
+            "life": {"page1": {"frequency": 1, "positions": [2]}},
+        }
+    )
+
+    assert search.autocomplete("insp") == ["inspir"]
+
+
+def test_suggest_corrections_returns_close_index_terms():
+    search = Search(
+        {
+            "philosophi": {"page1": {"frequency": 1, "positions": [0]}},
+            "life": {"page1": {"frequency": 1, "positions": [1]}},
+        }
+    )
+
+    assert search.suggest_corrections("philosofy") == ["philosophi"]
+
+
 def test_inverse_document_frequency_uses_smoothed_document_count():
     search = Search(
         {
@@ -77,6 +106,78 @@ def test_tfidf_score_sums_each_query_terms_weighted_frequency():
         + 2 * search.inverse_document_frequency("rare")
     )
     assert search.tf_idf_score("page1", ["common", "rare"]) == expected
+
+
+def test_find_supports_boolean_and_not_queries():
+    search = Search(
+        {
+            "hello": {
+                "page1": {"frequency": 1, "positions": [0]},
+                "page2": {"frequency": 1, "positions": [0]},
+            },
+            "world": {
+                "page2": {"frequency": 1, "positions": [1]},
+                "page3": {"frequency": 1, "positions": [0]},
+            },
+        }
+    )
+
+    assert search.find("hello AND NOT world") == [("page1", 1.2876820724517808)]
+
+
+def test_find_supports_boolean_or_queries():
+    search = Search(
+        {
+            "hello": {"page1": {"frequency": 2, "positions": [0, 2]}},
+            "world": {"page2": {"frequency": 1, "positions": [0]}},
+        }
+    )
+
+    assert search.find("hello OR world") == [
+        ("page1", 2.8109302162163288),
+        ("page2", 1.4054651081081644),
+    ]
+
+
+def test_find_supports_quoted_phrase_search(capsys):
+    search = Search(
+        {
+            "hello": {
+                "page1": {"frequency": 1, "positions": [0]},
+                "page2": {"frequency": 1, "positions": [0]},
+            },
+            "world": {
+                "page1": {"frequency": 1, "positions": [1]},
+                "page2": {"frequency": 1, "positions": [2]},
+            },
+        }
+    )
+
+    assert search.find('"hello world"') == [("page1", 2.0)]
+    assert 'Phrase: "hello world"' in capsys.readouterr().out
+
+
+def test_boolean_queries_can_use_quoted_phrases():
+    search = Search(
+        {
+            "hello": {
+                "page1": {"frequency": 1, "positions": [0]},
+                "page2": {"frequency": 1, "positions": [0]},
+            },
+            "world": {
+                "page1": {"frequency": 1, "positions": [1]},
+                "page2": {"frequency": 1, "positions": [2]},
+            },
+            "life": {
+                "page2": {"frequency": 2, "positions": [3, 4]},
+            },
+        }
+    )
+
+    assert search.find('"hello world" OR life') == [
+        ("page2", 2.8109302162163288),
+        ("page1", 2.0),
+    ]
 
 
 def test_find_returns_empty_list_when_any_word_is_missing(capsys):
