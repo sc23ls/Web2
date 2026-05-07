@@ -35,9 +35,28 @@ class Crawler:
 
                 soup = BeautifulSoup(response.text, "html.parser")
 
-                text = soup.get_text(separator=" ", strip=True)
+                page_text = ""
 
-                pages[current_url] = text
+                quotes = soup.find_all("div", class_="quote")
+
+                for quote in quotes:
+
+                    quote_text = quote.find("span", class_="text").get_text()
+
+                    author = quote.find("small", class_="author").get_text()
+
+                    tags = quote.find_all("a", class_="tag")
+
+                    tag_text = " ".join(tag.get_text() for tag in tags)
+
+                    page_text += f"{quote_text} {author} {tag_text} "
+
+                author_details = soup.find("div", class_="author-details")
+
+                if author_details:
+                    page_text += author_details.get_text(separator=" ", strip=True)
+
+                pages[current_url] = page_text
 
                 visited_urls.add(current_url)
 
