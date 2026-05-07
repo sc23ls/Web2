@@ -25,6 +25,9 @@ class Crawler:
 
             print(f"Crawling: {current_url}")
 
+            print(f"Queue size: {len(urls_to_visit)}")
+            print(f"Visited pages: {len(visited_urls)}")
+
             try:
                 response = requests.get(current_url)
 
@@ -79,5 +82,11 @@ class Crawler:
 
             except Exception as e:
                 print(f"Error crawling {current_url}: {e}")
+
+
+        print(f"\nTotal pages crawled: {len(pages)}")
+
+        print("\nCRAWLING COMPLETE")
+        print(f"Total pages crawled: {len(visited_urls)}")
 
         return pages

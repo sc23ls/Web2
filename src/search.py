@@ -6,7 +6,33 @@ class Search:
         word = word.lower()
 
         if word in self.index:
-            print(self.index[word])
+            def print_word(self, word):
+
+                word = word.lower()
+
+                if word not in self.index:
+                    print("Word not found.")
+                    return
+
+                postings = self.index[word]
+
+                print(f"\nWord: '{word}'")
+                print(f"Appears on {len(postings)} pages.\n")
+
+                total_frequency = 0
+
+                for page, stats in postings.items():
+
+                    frequency = stats["frequency"]
+
+                    total_frequency += frequency
+
+                    print(f"{page}")
+                    print(f"  Frequency: {frequency}")
+                    print(f"  Positions: {stats['positions']}")
+                    print()
+
+                print(f"Total occurrences across all pages: {total_frequency}")
         else:
             print("Word not found.")
 
@@ -25,6 +51,9 @@ class Search:
         results = set.intersection(*page_sets)
 
         if results:
+
+            print(f"\nQuery: '{query}'")
+            print(f"Matching pages: {len(results)}\n")
 
             ranked_results = []
 
