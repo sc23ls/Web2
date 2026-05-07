@@ -6,8 +6,10 @@ and the frequencies for TF-IDF ranking.
 """
 
 import json
+from json import JSONDecodeError
 import re
 from pathlib import Path
+from typing import Any
 from typing import TypedDict
 
 from nltk.stem import PorterStemmer
@@ -23,6 +25,14 @@ class PostingStats(TypedDict):
 
 
 InvertedIndex = dict[str, dict[str, PostingStats]]
+
+
+class IndexerError(Exception):
+    """Base class for indexer-specific failures."""
+
+
+class IndexPersistenceError(IndexerError):
+    """Raised when an index cannot be saved or loaded safely."""
 
 
 class Indexer:
@@ -63,16 +73,62 @@ class Indexer:
                 self.index[word][url]["positions"].append(position)
         print(f"Indexed {len(self.index)} unique words.")
 
+    @staticmethod
+    def _validate_index(data: Any) -> InvertedIndex:
+        """Validate loaded JSON before accepting it as an inverted index."""
+
+        if not isinstance(data, dict):
+            raise IndexPersistenceError("Index file must contain a JSON object.")
+
+        for term, postings in data.items():
+            if not isinstance(term, str) or not isinstance(postings, dict):
+                raise IndexPersistenceError("Index terms must map to page postings.")
+
+            for page, stats in postings.items():
+                if not isinstance(page, str) or not isinstance(stats, dict):
+                    raise IndexPersistenceError("Index postings must map pages to stats.")
+
+                frequency = stats.get("frequency")
+                positions = stats.get("positions")
+
+                if not isinstance(frequency, int) or not isinstance(positions, list):
+                    raise IndexPersistenceError(
+                        "Posting stats must include integer frequency and positions list."
+                    )
+
+                if not all(isinstance(position, int) for position in positions):
+                    raise IndexPersistenceError("Posting positions must be integers.")
+
+        return data
+
     def save_index(self, filename: str | Path = "data/index.json") -> None:
         """Persist the current index as formatted JSON."""
 
-        with open(filename, "w") as f:
-            json.dump(self.index, f, indent=4)
+        path = Path(filename)
+
+        try:
+            path.parent.mkdir(parents=True, exist_ok=True)
+
+            with open(path, "w") as f:
+                json.dump(self.index, f, indent=4)
+        except OSError as error:
+            raise IndexPersistenceError(f"Could not save index to {path}: {error}") from error
 
     def load_index(self, filename: str | Path = "data/index.json") -> InvertedIndex:
         """Load an index from JSON and return it."""
 
-        with open(filename, "r") as f:
-            self.index = json.load(f)
+        path = Path(filename)
+
+        try:
+            with open(path, "r") as f:
+                loaded_index = json.load(f)
+        except FileNotFoundError as error:
+            raise IndexPersistenceError(f"Index file not found: {path}") from error
+        except JSONDecodeError as error:
+            raise IndexPersistenceError(f"Index file is not valid JSON: {path}") from error
+        except OSError as error:
+            raise IndexPersistenceError(f"Could not load index from {path}: {error}") from error
+
+        self.index = self._validate_index(loaded_index)
 
         return self.index

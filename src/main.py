@@ -1,8 +1,8 @@
 """Command-line interface for building and querying the local search index."""
 
-from crawler import Crawler
-from indexer import Indexer
-from search import Search
+from crawler import Crawler, CrawlerError
+from indexer import Indexer, IndexPersistenceError
+from search import Search, SearchError
 
 
 def main() -> None:
@@ -14,21 +14,32 @@ def main() -> None:
     loaded = False
 
     while True:
-        command = input("> ").strip()
+        try:
+            command = input("> ").strip()
+        except (EOFError, KeyboardInterrupt):
+            print("\nExiting.")
+            break
 
         if command == "build":
 
-            pages = crawler.crawl()
+            try:
+                pages = crawler.crawl()
 
-            indexer.build_index(pages)
+                indexer.build_index(pages)
 
-            indexer.save_index()
+                indexer.save_index()
 
-            print("Index built and saved.")
+                print("Index built and saved.")
+            except (CrawlerError, IndexPersistenceError) as error:
+                print(f"Build failed: {error}")
 
         elif command == "load":
 
-            indexer.load_index()
+            try:
+                indexer.load_index()
+            except IndexPersistenceError as error:
+                print(f"Load failed: {error}")
+                continue
 
             loaded = True
 
@@ -44,7 +55,10 @@ def main() -> None:
 
             search = Search(indexer.index)
 
-            search.print_word(word)
+            try:
+                search.print_word(word)
+            except SearchError as error:
+                print(f"Search failed: {error}")
 
         elif command.startswith("find "):
 
@@ -56,7 +70,10 @@ def main() -> None:
 
             search = Search(indexer.index)
 
-            search.find(query)
+            try:
+                search.find(query)
+            except SearchError as error:
+                print(f"Search failed: {error}")
 
         elif command == "exit":
             break

@@ -133,7 +133,7 @@ def test_crawl_logs_request_errors_and_continues_without_raising(capsys):
 
     assert pages == {}
     output = capsys.readouterr().out
-    assert "Error crawling https://example.test: request timed out" in output
+    assert "HTTP error crawling https://example.test: request timed out" in output
 
 
 def test_crawl_uses_configured_delay(monkeypatch):
@@ -178,4 +178,4 @@ def test_crawl_propagates_malformed_quote_markup_as_logged_error(capsys):
     pages = crawler.crawl()
 
     assert pages == {}
-    assert "Error crawling https://example.test:" in capsys.readouterr().out
+    assert "Parse error crawling https://example.test:" in capsys.readouterr().out

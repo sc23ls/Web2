@@ -167,6 +167,19 @@ The source code is structured for readability, testing, and extension:
 - focused methods for crawling, parsing, ranking, and phrase matching
 - deterministic sorting for stable search results
 
+## Error Handling
+
+The application handles expected failures with clear, user-facing messages:
+
+- HTTP and crawler parsing errors are reported per URL without stopping the
+  whole crawl.
+- Missing, unreadable, invalid, or malformed index files raise explicit
+  persistence errors.
+- Invalid Boolean query syntax is reported as an invalid query instead of
+  failing silently.
+- The command-line interface catches build, load, search, EOF, and interrupt
+  failures and keeps the prompt understandable.
+
 ## Testing
 
 Run the deterministic local suite:

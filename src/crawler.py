@@ -14,6 +14,14 @@ import requests
 from bs4 import BeautifulSoup
 
 
+class CrawlerError(Exception):
+    """Base class for crawler-specific failures."""
+
+
+class CrawlerParseError(CrawlerError):
+    """Raised when a page is missing expected quote markup."""
+
+
 class HttpSession(Protocol):
     """Minimal HTTP interface required by :class:`Crawler`."""
 
@@ -70,14 +78,33 @@ class Crawler:
         self.delay = delay
         self.max_pages = max_pages
 
+    @staticmethod
+    def _required_text(element: Any, description: str) -> str:
+        """Return text from a required BeautifulSoup element.
+
+        Raises:
+            CrawlerParseError: If the element is missing from the page.
+        """
+
+        if element is None:
+            raise CrawlerParseError(f"Missing {description}.")
+
+        return element.get_text()
+
     def _extract_page_text(self, soup: BeautifulSoup) -> str:
         """Extract searchable text from a parsed quote page."""
 
         page_text = ""
 
         for quote in soup.find_all("div", class_="quote"):
-            quote_text = quote.find("span", class_="text").get_text()
-            author = quote.find("small", class_="author").get_text()
+            quote_text = self._required_text(
+                quote.find("span", class_="text"),
+                "quote text",
+            )
+            author = self._required_text(
+                quote.find("small", class_="author"),
+                "quote author",
+            )
             tags = quote.find_all("a", class_="tag")
             tag_text = " ".join(tag.get_text() for tag in tags)
             page_text += f"{quote_text} {author} {tag_text} "
@@ -176,8 +203,12 @@ class Crawler:
                 if self.delay:
                     time.sleep(self.delay)
 
-            except Exception as e:
-                print(f"Error crawling {current_url}: {e}")
+            except requests.RequestException as error:
+                print(f"HTTP error crawling {current_url}: {error}")
+            except CrawlerParseError as error:
+                print(f"Parse error crawling {current_url}: {error}")
+            except Exception as error:
+                print(f"Unexpected error crawling {current_url}: {error}")
 
         elapsed_time = format_elapsed_time(time.perf_counter() - start_time)
 

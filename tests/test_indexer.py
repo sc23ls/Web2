@@ -1,6 +1,8 @@
 import json
 
-from indexer import Indexer
+import pytest
+
+from indexer import Indexer, IndexPersistenceError
 
 
 def test_build_index_tracks_frequency_positions_and_multiple_pages():
@@ -74,3 +76,28 @@ def test_save_and_load_index_round_trip(tmp_path):
 
     assert result == indexer.index
     assert loaded.index == indexer.index
+
+
+def test_load_index_reports_missing_file(tmp_path):
+    indexer = Indexer()
+
+    with pytest.raises(IndexPersistenceError, match="Index file not found"):
+        indexer.load_index(tmp_path / "missing.json")
+
+
+def test_load_index_reports_invalid_json(tmp_path):
+    index_file = tmp_path / "index.json"
+    index_file.write_text("{not json")
+    indexer = Indexer()
+
+    with pytest.raises(IndexPersistenceError, match="not valid JSON"):
+        indexer.load_index(index_file)
+
+
+def test_load_index_rejects_invalid_index_shape(tmp_path):
+    index_file = tmp_path / "index.json"
+    index_file.write_text(json.dumps({"hello": {"page1": {"frequency": "many"}}}))
+    indexer = Indexer()
+
+    with pytest.raises(IndexPersistenceError, match="Posting stats"):
+        indexer.load_index(index_file)

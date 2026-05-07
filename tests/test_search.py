@@ -180,6 +180,25 @@ def test_boolean_queries_can_use_quoted_phrases():
     ]
 
 
+def test_find_reports_invalid_boolean_query_syntax(capsys):
+    search = Search({"hello": {"page1": {"frequency": 1, "positions": [0]}}})
+
+    assert search.find("hello AND") == []
+    assert "Invalid query: Query cannot end with an operator." in capsys.readouterr().out
+
+
+def test_find_reports_missing_operator_in_boolean_query(capsys):
+    search = Search(
+        {
+            "hello": {"page1": {"frequency": 1, "positions": [0]}},
+            "world": {"page1": {"frequency": 1, "positions": [1]}},
+        }
+    )
+
+    assert search.find("hello OR world hello") == []
+    assert "Invalid query: Missing operator between query terms." in capsys.readouterr().out
+
+
 def test_find_returns_empty_list_when_any_word_is_missing(capsys):
     search = Search({"hello": {"page1": {"frequency": 1, "positions": [0]}}})
 

@@ -26,6 +26,14 @@ QueryToken: TypeAlias = Operator | QueryTerm
 SearchResult: TypeAlias = tuple[str, float]
 
 
+class SearchError(Exception):
+    """Base class for search-specific failures."""
+
+
+class QuerySyntaxError(SearchError):
+    """Raised when a Boolean query cannot be parsed safely."""
+
+
 class Search:
     """Query engine for an inverted index.
 
@@ -263,6 +271,37 @@ class Search:
         output.extend(reversed(operators))
         return output
 
+    def validate_boolean_tokens(self, tokens: list[QueryToken]) -> None:
+        """Validate Boolean query syntax before evaluation.
+
+        Raises:
+            QuerySyntaxError: If operators and operands are in an invalid order.
+        """
+
+        expecting_operand = True
+
+        for token in tokens:
+            if isinstance(token, tuple):
+                if not expecting_operand:
+                    raise QuerySyntaxError("Missing operator between query terms.")
+
+                expecting_operand = False
+                continue
+
+            if token == "NOT":
+                if not expecting_operand:
+                    raise QuerySyntaxError("NOT must follow AND, OR, or the query start.")
+
+                continue
+
+            if expecting_operand:
+                raise QuerySyntaxError(f"{token} must follow a search term or phrase.")
+
+            expecting_operand = True
+
+        if expecting_operand:
+            raise QuerySyntaxError("Query cannot end with an operator.")
+
     def evaluate_postfix(self, postfix: list[QueryToken]) -> set[str]:
         """Evaluate postfix Boolean tokens into a set of matching pages."""
 
@@ -281,13 +320,13 @@ class Search:
 
             if token == "NOT":
                 if not stack:
-                    return set()
+                    raise QuerySyntaxError("NOT must be followed by a search term or phrase.")
 
                 stack.append(self.documents - stack.pop())
                 continue
 
             if len(stack) < 2:
-                return set()
+                raise QuerySyntaxError(f"{token} needs a term or phrase on both sides.")
 
             right = stack.pop()
             left = stack.pop()
@@ -298,7 +337,7 @@ class Search:
                 stack.append(left | right)
 
         if len(stack) != 1:
-            return set()
+            raise QuerySyntaxError("Could not evaluate query.")
 
         return stack[0]
 
@@ -459,6 +498,12 @@ class Search:
             return self.phrase_search(tokens[0][1])
 
         if has_boolean_operator:
+            try:
+                self.validate_boolean_tokens(tokens)
+            except QuerySyntaxError as error:
+                print(f"Invalid query: {error}")
+                return []
+
             words = self.positive_query_terms(tokens)
 
             if not words:

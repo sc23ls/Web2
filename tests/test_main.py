@@ -1,6 +1,7 @@
 import builtins
 
 import main
+from indexer import IndexPersistenceError
 
 
 class FakeCrawler:
@@ -47,6 +48,16 @@ class FakeSearch:
         self.queries.append(query)
 
 
+class FailingLoadIndexer(FakeIndexer):
+    def load_index(self):
+        raise IndexPersistenceError("Index file not found: data/index.json")
+
+
+class FailingSaveIndexer(FakeIndexer):
+    def save_index(self):
+        raise IndexPersistenceError("Could not save index")
+
+
 def run_main_with_commands(monkeypatch, commands):
     inputs = iter(commands)
     monkeypatch.setattr(builtins, "input", lambda _: next(inputs))
@@ -54,6 +65,18 @@ def run_main_with_commands(monkeypatch, commands):
     monkeypatch.setattr(main, "Indexer", FakeIndexer)
     monkeypatch.setattr(main, "Search", FakeSearch)
     FakeIndexer.instances = []
+    FakeSearch.instances = []
+
+    main.main()
+
+
+def run_main_with_indexer(monkeypatch, commands, indexer_class):
+    inputs = iter(commands)
+    monkeypatch.setattr(builtins, "input", lambda _: next(inputs))
+    monkeypatch.setattr(main, "Crawler", FakeCrawler)
+    monkeypatch.setattr(main, "Indexer", indexer_class)
+    monkeypatch.setattr(main, "Search", FakeSearch)
+    indexer_class.instances = []
     FakeSearch.instances = []
 
     main.main()
@@ -89,3 +112,18 @@ def test_main_reports_unknown_command(monkeypatch, capsys):
     run_main_with_commands(monkeypatch, ["wat", "exit"])
 
     assert "Unknown command." in capsys.readouterr().out
+
+
+def test_main_reports_load_failures_without_marking_index_loaded(monkeypatch, capsys):
+    run_main_with_indexer(monkeypatch, ["load", "find hello", "exit"], FailingLoadIndexer)
+
+    output = capsys.readouterr().out
+    assert "Load failed: Index file not found: data/index.json" in output
+    assert "Please load the index first." in output
+    assert FakeSearch.instances == []
+
+
+def test_main_reports_build_save_failures(monkeypatch, capsys):
+    run_main_with_indexer(monkeypatch, ["build", "exit"], FailingSaveIndexer)
+
+    assert "Build failed: Could not save index" in capsys.readouterr().out
