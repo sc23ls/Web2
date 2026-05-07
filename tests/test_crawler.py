@@ -99,6 +99,34 @@ def test_crawl_follows_internal_links_once_and_ignores_external_fragment_and_dup
     ]
 
 
+def test_crawl_canonicalizes_first_page_urls_to_prevent_duplicate_pages():
+    session = FakeSession(
+        {
+            "https://example.test": FakeResponse(
+                quote_page(
+                    links="""
+                    <a href="/love/">Love</a>
+                    <a href="/love/page/1/">Love first page duplicate</a>
+                    <a href="/love?sort=popular">Love query duplicate</a>
+                    """
+                )
+            ),
+            "https://example.test/love": FakeResponse(
+                quote_page(quote="Love page.", author="Jane Austen")
+            ),
+        }
+    )
+    crawler = Crawler(base_url="https://example.test", session=session, delay=0)
+
+    pages = crawler.crawl()
+
+    assert list(pages) == ["https://example.test", "https://example.test/love"]
+    assert session.requests == [
+        ("https://example.test", 10),
+        ("https://example.test/love", 10),
+    ]
+
+
 def test_crawl_respects_max_pages_limit():
     session = FakeSession(
         {

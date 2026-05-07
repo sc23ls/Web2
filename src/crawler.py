@@ -6,12 +6,15 @@ tests or benchmarks.
 """
 
 from collections import deque
+import re
 import time
 from typing import Any, Protocol
-from urllib.parse import urljoin
+from urllib.parse import urljoin, urlsplit, urlunsplit
 
 import requests
 from bs4 import BeautifulSoup
+
+FIRST_PAGE_RE = re.compile(r"/page/1/?$")
 
 
 class CrawlerError(Exception):
@@ -73,10 +76,24 @@ class Crawler:
         delay: float = 1,
         max_pages: int | None = None,
     ) -> None:
-        self.base_url = base_url.rstrip("/")
+        self.base_url = self._normalize_url(base_url)
         self.session = session or requests
         self.delay = delay
         self.max_pages = max_pages
+
+    @staticmethod
+    def _normalize_url(url: str) -> str:
+        """Return a canonical URL for duplicate detection.
+
+        The target site exposes first pages both as ``/tag/name`` and
+        ``/tag/name/page/1``. Collapsing those forms prevents duplicate pages
+        from being crawled and indexed.
+        """
+
+        parsed_url = urlsplit(url)
+        path = FIRST_PAGE_RE.sub("", parsed_url.path).rstrip("/")
+        normalized = parsed_url._replace(path=path, query="", fragment="")
+        return urlunsplit(normalized).rstrip("/")
 
     @staticmethod
     def _required_text(element: Any, description: str) -> str:
@@ -144,10 +161,10 @@ class Crawler:
         for link in soup.find_all("a"):
             href = link.get("href")
 
-            if not href:
+            if not href or "#" in href:
                 continue
 
-            full_url = urljoin(self.base_url, href).rstrip("/")
+            full_url = self._normalize_url(urljoin(self.base_url, href))
 
             if self._should_queue_url(full_url, visited_urls, queued_urls):
                 discovered_links.append(full_url)
