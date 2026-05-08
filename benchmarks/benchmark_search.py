@@ -9,8 +9,8 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "src"))
 
-from indexer import Indexer
-from search import Search
+from src.indexer import Indexer
+from src.search import Search
 
 
 def generate_pages(page_count, words_per_page, vocabulary_size):
