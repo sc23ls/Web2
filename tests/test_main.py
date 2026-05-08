@@ -1,7 +1,7 @@
 import builtins
 
-import main
-from indexer import IndexPersistenceError
+from src import main
+from src.indexer import IndexPersistenceError
 
 
 class FakeCrawler:

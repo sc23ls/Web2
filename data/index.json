@@ -651,22 +651,6 @@
                 281
             ]
         },
-        "https://quotes.toscrape.com/author/Mark-Twain": {
-            "frequency": 11,
-            "positions": [
-                9,
-                42,
-                47,
-                63,
-                107,
-                137,
-                224,
-                234,
-                269,
-                289,
-                301
-            ]
-        },
         "https://quotes.toscrape.com/tag/contentment": {
             "frequency": 1,
             "positions": [
@@ -1479,6 +1463,22 @@
             "positions": [
                 11,
                 22
+            ]
+        },
+        "https://quotes.toscrape.com/author/Mark-Twain": {
+            "frequency": 11,
+            "positions": [
+                9,
+                42,
+                47,
+                63,
+                107,
+                137,
+                224,
+                234,
+                269,
+                289,
+                301
             ]
         },
         "https://quotes.toscrape.com/author/Khaled-Hosseini": {
@@ -2399,15 +2399,6 @@
                 246
             ]
         },
-        "https://quotes.toscrape.com/author/Mark-Twain": {
-            "frequency": 4,
-            "positions": [
-                79,
-                94,
-                170,
-                288
-            ]
-        },
         "https://quotes.toscrape.com/author/Allen-Saunders": {
             "frequency": 4,
             "positions": [
@@ -2667,6 +2658,15 @@
             "frequency": 1,
             "positions": [
                 26
+            ]
+        },
+        "https://quotes.toscrape.com/author/Mark-Twain": {
+            "frequency": 4,
+            "positions": [
+                79,
+                94,
+                170,
+                288
             ]
         },
         "https://quotes.toscrape.com/tag/mind": {
@@ -3769,13 +3769,6 @@
                 428
             ]
         },
-        "https://quotes.toscrape.com/author/Mark-Twain": {
-            "frequency": 2,
-            "positions": [
-                218,
-                283
-            ]
-        },
         "https://quotes.toscrape.com/author/Allen-Saunders": {
             "frequency": 4,
             "positions": [
@@ -4067,6 +4060,13 @@
             "frequency": 1,
             "positions": [
                 15
+            ]
+        },
+        "https://quotes.toscrape.com/author/Mark-Twain": {
+            "frequency": 2,
+            "positions": [
+                218,
+                283
             ]
         },
         "https://quotes.toscrape.com/tag/mind": {
@@ -4640,12 +4640,6 @@
                 26
             ]
         },
-        "https://quotes.toscrape.com/author/Mark-Twain": {
-            "frequency": 1,
-            "positions": [
-                31
-            ]
-        },
         "https://quotes.toscrape.com/tag/contentment": {
             "frequency": 1,
             "positions": [
@@ -4987,6 +4981,12 @@
             "frequency": 1,
             "positions": [
                 287
+            ]
+        },
+        "https://quotes.toscrape.com/author/Mark-Twain": {
+            "frequency": 1,
+            "positions": [
+                31
             ]
         },
         "https://quotes.toscrape.com/author/Khaled-Hosseini": {
@@ -5672,22 +5672,6 @@
                 272
             ]
         },
-        "https://quotes.toscrape.com/author/Mark-Twain": {
-            "frequency": 11,
-            "positions": [
-                74,
-                80,
-                95,
-                102,
-                118,
-                130,
-                134,
-                171,
-                189,
-                206,
-                274
-            ]
-        },
         "https://quotes.toscrape.com/tag/contentment": {
             "frequency": 1,
             "positions": [
@@ -6262,6 +6246,22 @@
             "frequency": 1,
             "positions": [
                 5
+            ]
+        },
+        "https://quotes.toscrape.com/author/Mark-Twain": {
+            "frequency": 11,
+            "positions": [
+                74,
+                80,
+                95,
+                102,
+                118,
+                130,
+                134,
+                171,
+                189,
+                206,
+                274
             ]
         },
         "https://quotes.toscrape.com/author/Khaled-Hosseini": {
@@ -7094,20 +7094,6 @@
                 267
             ]
         },
-        "https://quotes.toscrape.com/author/Mark-Twain": {
-            "frequency": 9,
-            "positions": [
-                37,
-                49,
-                141,
-                209,
-                236,
-                254,
-                268,
-                293,
-                303
-            ]
-        },
         "https://quotes.toscrape.com/author/Allen-Saunders": {
             "frequency": 4,
             "positions": [
@@ -7591,6 +7577,20 @@
                 324,
                 335,
                 346
+            ]
+        },
+        "https://quotes.toscrape.com/author/Mark-Twain": {
+            "frequency": 9,
+            "positions": [
+                37,
+                49,
+                141,
+                209,
+                236,
+                254,
+                268,
+                293,
+                303
             ]
         },
         "https://quotes.toscrape.com/author/Khaled-Hosseini": {
@@ -8381,12 +8381,6 @@
                 21
             ]
         },
-        "https://quotes.toscrape.com/author/Mark-Twain": {
-            "frequency": 1,
-            "positions": [
-                147
-            ]
-        },
         "https://quotes.toscrape.com/author/George-Bernard-Shaw": {
             "frequency": 2,
             "positions": [
@@ -8542,6 +8536,12 @@
             "frequency": 1,
             "positions": [
                 185
+            ]
+        },
+        "https://quotes.toscrape.com/author/Mark-Twain": {
+            "frequency": 1,
+            "positions": [
+                147
             ]
         },
         "https://quotes.toscrape.com/tag/fairy-tales": {
@@ -9784,12 +9784,6 @@
                 206
             ]
         },
-        "https://quotes.toscrape.com/author/Mark-Twain": {
-            "frequency": 1,
-            "positions": [
-                252
-            ]
-        },
         "https://quotes.toscrape.com/author/Allen-Saunders": {
             "frequency": 1,
             "positions": [
@@ -10062,6 +10056,12 @@
                 88,
                 98,
                 105
+            ]
+        },
+        "https://quotes.toscrape.com/author/Mark-Twain": {
+            "frequency": 1,
+            "positions": [
+                252
             ]
         },
         "https://quotes.toscrape.com/author/Khaled-Hosseini": {
@@ -13283,18 +13283,6 @@
                 20
             ]
         },
-        "https://quotes.toscrape.com/author/Mark-Twain": {
-            "frequency": 7,
-            "positions": [
-                85,
-                113,
-                127,
-                146,
-                191,
-                230,
-                250
-            ]
-        },
         "https://quotes.toscrape.com/author/Allen-Saunders": {
             "frequency": 4,
             "positions": [
@@ -13767,6 +13755,18 @@
                 188,
                 211,
                 214
+            ]
+        },
+        "https://quotes.toscrape.com/author/Mark-Twain": {
+            "frequency": 7,
+            "positions": [
+                85,
+                113,
+                127,
+                146,
+                191,
+                230,
+                250
             ]
         },
         "https://quotes.toscrape.com/author/Khaled-Hosseini": {
@@ -15704,13 +15704,6 @@
                 144
             ]
         },
-        "https://quotes.toscrape.com/author/Mark-Twain": {
-            "frequency": 2,
-            "positions": [
-                203,
-                262
-            ]
-        },
         "https://quotes.toscrape.com/tag/authors": {
             "frequency": 1,
             "positions": [
@@ -15734,6 +15727,13 @@
             "positions": [
                 66,
                 273
+            ]
+        },
+        "https://quotes.toscrape.com/author/Mark-Twain": {
+            "frequency": 2,
+            "positions": [
+                203,
+                262
             ]
         },
         "https://quotes.toscrape.com/author/E-E-Cummings": {
@@ -18600,16 +18600,6 @@
                 237
             ]
         },
-        "https://quotes.toscrape.com/author/Mark-Twain": {
-            "frequency": 5,
-            "positions": [
-                6,
-                56,
-                97,
-                222,
-                259
-            ]
-        },
         "https://quotes.toscrape.com/author/Allen-Saunders": {
             "frequency": 10,
             "positions": [
@@ -19106,6 +19096,16 @@
                 314,
                 337,
                 348
+            ]
+        },
+        "https://quotes.toscrape.com/author/Mark-Twain": {
+            "frequency": 5,
+            "positions": [
+                6,
+                56,
+                97,
+                222,
+                259
             ]
         },
         "https://quotes.toscrape.com/author/Khaled-Hosseini": {
@@ -19609,13 +19609,6 @@
                 229
             ]
         },
-        "https://quotes.toscrape.com/author/Mark-Twain": {
-            "frequency": 2,
-            "positions": [
-                35,
-                45
-            ]
-        },
         "https://quotes.toscrape.com/author/Haruki-Murakami": {
             "frequency": 2,
             "positions": [
@@ -19665,6 +19658,13 @@
                 211,
                 286,
                 324
+            ]
+        },
+        "https://quotes.toscrape.com/author/Mark-Twain": {
+            "frequency": 2,
+            "positions": [
+                35,
+                45
             ]
         },
         "https://quotes.toscrape.com/author/E-E-Cummings": {
@@ -20793,12 +20793,6 @@
                 75
             ]
         },
-        "https://quotes.toscrape.com/author/Mark-Twain": {
-            "frequency": 1,
-            "positions": [
-                135
-            ]
-        },
         "https://quotes.toscrape.com/author/Dr-Seuss": {
             "frequency": 2,
             "positions": [
@@ -20872,6 +20866,12 @@
             "positions": [
                 128,
                 159
+            ]
+        },
+        "https://quotes.toscrape.com/author/Mark-Twain": {
+            "frequency": 1,
+            "positions": [
+                135
             ]
         },
         "https://quotes.toscrape.com/tag/sinister": {
@@ -21582,24 +21582,6 @@
                 280
             ]
         },
-        "https://quotes.toscrape.com/author/Mark-Twain": {
-            "frequency": 13,
-            "positions": [
-                28,
-                46,
-                68,
-                82,
-                150,
-                173,
-                178,
-                184,
-                186,
-                195,
-                214,
-                227,
-                296
-            ]
-        },
         "https://quotes.toscrape.com/tag/contentment": {
             "frequency": 1,
             "positions": [
@@ -22154,6 +22136,24 @@
             "frequency": 1,
             "positions": [
                 21
+            ]
+        },
+        "https://quotes.toscrape.com/author/Mark-Twain": {
+            "frequency": 13,
+            "positions": [
+                28,
+                46,
+                68,
+                82,
+                150,
+                173,
+                178,
+                184,
+                186,
+                195,
+                214,
+                227,
+                296
             ]
         },
         "https://quotes.toscrape.com/author/Khaled-Hosseini": {
@@ -22733,13 +22733,6 @@
                 132
             ]
         },
-        "https://quotes.toscrape.com/author/Mark-Twain": {
-            "frequency": 2,
-            "positions": [
-                90,
-                278
-            ]
-        },
         "https://quotes.toscrape.com/author/Allen-Saunders": {
             "frequency": 1,
             "positions": [
@@ -22975,6 +22968,13 @@
                 266
             ]
         },
+        "https://quotes.toscrape.com/author/Mark-Twain": {
+            "frequency": 2,
+            "positions": [
+                90,
+                278
+            ]
+        },
         "https://quotes.toscrape.com/author/Khaled-Hosseini": {
             "frequency": 4,
             "positions": [
@@ -23182,16 +23182,16 @@
                 348
             ]
         },
-        "https://quotes.toscrape.com/author/Mark-Twain": {
-            "frequency": 1,
-            "positions": [
-                16
-            ]
-        },
         "https://quotes.toscrape.com/tag/life/page/2": {
             "frequency": 1,
             "positions": [
                 59
+            ]
+        },
+        "https://quotes.toscrape.com/author/Mark-Twain": {
+            "frequency": 1,
+            "positions": [
+                16
             ]
         },
         "https://quotes.toscrape.com/page/10": {
@@ -23999,12 +23999,6 @@
                 122
             ]
         },
-        "https://quotes.toscrape.com/author/Mark-Twain": {
-            "frequency": 1,
-            "positions": [
-                169
-            ]
-        },
         "https://quotes.toscrape.com/author/Allen-Saunders": {
             "frequency": 1,
             "positions": [
@@ -24053,6 +24047,12 @@
             "frequency": 1,
             "positions": [
                 47
+            ]
+        },
+        "https://quotes.toscrape.com/author/Mark-Twain": {
+            "frequency": 1,
+            "positions": [
+                169
             ]
         },
         "https://quotes.toscrape.com/author/J-M-Barrie": {
@@ -24518,13 +24518,6 @@
                 194
             ]
         },
-        "https://quotes.toscrape.com/author/Mark-Twain": {
-            "frequency": 2,
-            "positions": [
-                33,
-                65
-            ]
-        },
         "https://quotes.toscrape.com/author/Allen-Saunders": {
             "frequency": 4,
             "positions": [
@@ -24785,6 +24778,13 @@
             "frequency": 1,
             "positions": [
                 289
+            ]
+        },
+        "https://quotes.toscrape.com/author/Mark-Twain": {
+            "frequency": 2,
+            "positions": [
+                33,
+                65
             ]
         },
         "https://quotes.toscrape.com/author/Khaled-Hosseini": {
@@ -27051,12 +27051,6 @@
                 209
             ]
         },
-        "https://quotes.toscrape.com/author/Mark-Twain": {
-            "frequency": 1,
-            "positions": [
-                163
-            ]
-        },
         "https://quotes.toscrape.com/author/Madeleine-LEngle": {
             "frequency": 1,
             "positions": [
@@ -27073,6 +27067,12 @@
             "frequency": 1,
             "positions": [
                 32
+            ]
+        },
+        "https://quotes.toscrape.com/author/Mark-Twain": {
+            "frequency": 1,
+            "positions": [
+                163
             ]
         }
     },
@@ -27665,13 +27665,6 @@
                 165
             ]
         },
-        "https://quotes.toscrape.com/author/Mark-Twain": {
-            "frequency": 2,
-            "positions": [
-                78,
-                248
-            ]
-        },
         "https://quotes.toscrape.com/author/Allen-Saunders": {
             "frequency": 2,
             "positions": [
@@ -27804,6 +27797,13 @@
             "frequency": 1,
             "positions": [
                 158
+            ]
+        },
+        "https://quotes.toscrape.com/author/Mark-Twain": {
+            "frequency": 2,
+            "positions": [
+                78,
+                248
             ]
         },
         "https://quotes.toscrape.com/author/Khaled-Hosseini": {
@@ -27976,16 +27976,16 @@
                 19
             ]
         },
-        "https://quotes.toscrape.com/author/Mark-Twain": {
-            "frequency": 1,
-            "positions": [
-                119
-            ]
-        },
         "https://quotes.toscrape.com/author/Pablo-Neruda": {
             "frequency": 1,
             "positions": [
                 334
+            ]
+        },
+        "https://quotes.toscrape.com/author/Mark-Twain": {
+            "frequency": 1,
+            "positions": [
+                119
             ]
         }
     },
@@ -29900,13 +29900,6 @@
                 2
             ]
         },
-        "https://quotes.toscrape.com/author/Mark-Twain": {
-            "frequency": 2,
-            "positions": [
-                2,
-                272
-            ]
-        },
         "https://quotes.toscrape.com/author/Allen-Saunders": {
             "frequency": 2,
             "positions": [
@@ -30077,6 +30070,13 @@
             "positions": [
                 2,
                 54
+            ]
+        },
+        "https://quotes.toscrape.com/author/Mark-Twain": {
+            "frequency": 2,
+            "positions": [
+                2,
+                272
             ]
         },
         "https://quotes.toscrape.com/author/Khaled-Hosseini": {
@@ -30389,12 +30389,6 @@
                 12
             ]
         },
-        "https://quotes.toscrape.com/author/Mark-Twain": {
-            "frequency": 1,
-            "positions": [
-                12
-            ]
-        },
         "https://quotes.toscrape.com/author/Allen-Saunders": {
             "frequency": 1,
             "positions": [
@@ -30547,6 +30541,12 @@
             ]
         },
         "https://quotes.toscrape.com/author/John-Lennon": {
+            "frequency": 1,
+            "positions": [
+                12
+            ]
+        },
+        "https://quotes.toscrape.com/author/Mark-Twain": {
             "frequency": 1,
             "positions": [
                 12
@@ -30764,16 +30764,6 @@
                 201,
                 230,
                 271
-            ]
-        },
-        "https://quotes.toscrape.com/author/Mark-Twain": {
-            "frequency": 5,
-            "positions": [
-                24,
-                117,
-                188,
-                228,
-                286
             ]
         },
         "https://quotes.toscrape.com/author/Allen-Saunders": {
@@ -31045,6 +31035,16 @@
                 328
             ]
         },
+        "https://quotes.toscrape.com/author/Mark-Twain": {
+            "frequency": 5,
+            "positions": [
+                24,
+                117,
+                188,
+                228,
+                286
+            ]
+        },
         "https://quotes.toscrape.com/author/Khaled-Hosseini": {
             "frequency": 4,
             "positions": [
@@ -31245,26 +31245,6 @@
                 109,
                 172,
                 270
-            ]
-        },
-        "https://quotes.toscrape.com/author/Mark-Twain": {
-            "frequency": 15,
-            "positions": [
-                30,
-                71,
-                76,
-                100,
-                116,
-                124,
-                132,
-                166,
-                187,
-                199,
-                204,
-                216,
-                241,
-                280,
-                285
             ]
         },
         "https://quotes.toscrape.com/author/Allen-Saunders": {
@@ -31556,6 +31536,26 @@
                 327
             ]
         },
+        "https://quotes.toscrape.com/author/Mark-Twain": {
+            "frequency": 15,
+            "positions": [
+                30,
+                71,
+                76,
+                100,
+                116,
+                124,
+                132,
+                166,
+                187,
+                199,
+                204,
+                216,
+                241,
+                280,
+                285
+            ]
+        },
         "https://quotes.toscrape.com/author/Khaled-Hosseini": {
             "frequency": 7,
             "positions": [
@@ -31820,22 +31820,6 @@
                 268
             ]
         },
-        "https://quotes.toscrape.com/author/Mark-Twain": {
-            "frequency": 11,
-            "positions": [
-                19,
-                34,
-                86,
-                155,
-                164,
-                176,
-                212,
-                244,
-                255,
-                263,
-                294
-            ]
-        },
         "https://quotes.toscrape.com/author/Allen-Saunders": {
             "frequency": 5,
             "positions": [
@@ -32090,6 +32074,22 @@
                 192,
                 215,
                 243
+            ]
+        },
+        "https://quotes.toscrape.com/author/Mark-Twain": {
+            "frequency": 11,
+            "positions": [
+                19,
+                34,
+                86,
+                155,
+                164,
+                176,
+                212,
+                244,
+                255,
+                263,
+                294
             ]
         },
         "https://quotes.toscrape.com/author/Khaled-Hosseini": {
@@ -32414,12 +32414,6 @@
                 195
             ]
         },
-        "https://quotes.toscrape.com/author/Mark-Twain": {
-            "frequency": 1,
-            "positions": [
-                120
-            ]
-        },
         "https://quotes.toscrape.com/author/Allen-Saunders": {
             "frequency": 3,
             "positions": [
@@ -32598,6 +32592,12 @@
             "frequency": 1,
             "positions": [
                 275
+            ]
+        },
+        "https://quotes.toscrape.com/author/Mark-Twain": {
+            "frequency": 1,
+            "positions": [
+                120
             ]
         },
         "https://quotes.toscrape.com/author/Khaled-Hosseini": {
@@ -32945,13 +32945,6 @@
                 215
             ]
         },
-        "https://quotes.toscrape.com/author/Mark-Twain": {
-            "frequency": 2,
-            "positions": [
-                18,
-                276
-            ]
-        },
         "https://quotes.toscrape.com/author/Dr-Seuss": {
             "frequency": 1,
             "positions": [
@@ -33102,6 +33095,13 @@
                 112,
                 183,
                 198
+            ]
+        },
+        "https://quotes.toscrape.com/author/Mark-Twain": {
+            "frequency": 2,
+            "positions": [
+                18,
+                276
             ]
         },
         "https://quotes.toscrape.com/author/Khaled-Hosseini": {
@@ -33441,13 +33441,6 @@
                 80
             ]
         },
-        "https://quotes.toscrape.com/author/Mark-Twain": {
-            "frequency": 2,
-            "positions": [
-                152,
-                267
-            ]
-        },
         "https://quotes.toscrape.com/author/Dr-Seuss": {
             "frequency": 6,
             "positions": [
@@ -33515,6 +33508,13 @@
                 190,
                 311,
                 319
+            ]
+        },
+        "https://quotes.toscrape.com/author/Mark-Twain": {
+            "frequency": 2,
+            "positions": [
+                152,
+                267
             ]
         },
         "https://quotes.toscrape.com/author/W-C-Fields": {
@@ -34112,14 +34112,6 @@
                 276
             ]
         },
-        "https://quotes.toscrape.com/author/Mark-Twain": {
-            "frequency": 3,
-            "positions": [
-                106,
-                219,
-                282
-            ]
-        },
         "https://quotes.toscrape.com/author/Allen-Saunders": {
             "frequency": 7,
             "positions": [
@@ -34329,6 +34321,14 @@
                 239,
                 294,
                 305
+            ]
+        },
+        "https://quotes.toscrape.com/author/Mark-Twain": {
+            "frequency": 3,
+            "positions": [
+                106,
+                219,
+                282
             ]
         },
         "https://quotes.toscrape.com/author/W-C-Fields": {
@@ -34544,13 +34544,6 @@
                 243
             ]
         },
-        "https://quotes.toscrape.com/author/Mark-Twain": {
-            "frequency": 2,
-            "positions": [
-                77,
-                158
-            ]
-        },
         "https://quotes.toscrape.com/author/Dr-Seuss": {
             "frequency": 3,
             "positions": [
@@ -34648,6 +34641,13 @@
             "frequency": 1,
             "positions": [
                 133
+            ]
+        },
+        "https://quotes.toscrape.com/author/Mark-Twain": {
+            "frequency": 2,
+            "positions": [
+                77,
+                158
             ]
         },
         "https://quotes.toscrape.com/author/E-E-Cummings": {
@@ -34895,12 +34895,6 @@
                 274
             ]
         },
-        "https://quotes.toscrape.com/author/Mark-Twain": {
-            "frequency": 1,
-            "positions": [
-                92
-            ]
-        },
         "https://quotes.toscrape.com/author/Allen-Saunders": {
             "frequency": 1,
             "positions": [
@@ -34999,6 +34993,12 @@
             "frequency": 1,
             "positions": [
                 236
+            ]
+        },
+        "https://quotes.toscrape.com/author/Mark-Twain": {
+            "frequency": 1,
+            "positions": [
+                92
             ]
         },
         "https://quotes.toscrape.com/author/Khaled-Hosseini": {
@@ -35116,12 +35116,6 @@
                 347
             ]
         },
-        "https://quotes.toscrape.com/author/Mark-Twain": {
-            "frequency": 1,
-            "positions": [
-                205
-            ]
-        },
         "https://quotes.toscrape.com/author/Dr-Seuss": {
             "frequency": 1,
             "positions": [
@@ -35150,6 +35144,12 @@
             "frequency": 1,
             "positions": [
                 111
+            ]
+        },
+        "https://quotes.toscrape.com/author/Mark-Twain": {
+            "frequency": 1,
+            "positions": [
+                205
             ]
         },
         "https://quotes.toscrape.com/author/Khaled-Hosseini": {
@@ -35447,12 +35447,6 @@
                 158
             ]
         },
-        "https://quotes.toscrape.com/author/Mark-Twain": {
-            "frequency": 1,
-            "positions": [
-                273
-            ]
-        },
         "https://quotes.toscrape.com/author/Dr-Seuss": {
             "frequency": 1,
             "positions": [
@@ -35535,6 +35529,12 @@
             "frequency": 1,
             "positions": [
                 162
+            ]
+        },
+        "https://quotes.toscrape.com/author/Mark-Twain": {
+            "frequency": 1,
+            "positions": [
+                273
             ]
         },
         "https://quotes.toscrape.com/author/W-C-Fields": {
@@ -35779,16 +35779,16 @@
                 98
             ]
         },
-        "https://quotes.toscrape.com/author/Mark-Twain": {
-            "frequency": 1,
-            "positions": [
-                271
-            ]
-        },
         "https://quotes.toscrape.com/author/John-Lennon": {
             "frequency": 1,
             "positions": [
                 288
+            ]
+        },
+        "https://quotes.toscrape.com/author/Mark-Twain": {
+            "frequency": 1,
+            "positions": [
+                271
             ]
         }
     },
@@ -35962,13 +35962,6 @@
                 200
             ]
         },
-        "https://quotes.toscrape.com/author/Mark-Twain": {
-            "frequency": 2,
-            "positions": [
-                59,
-                144
-            ]
-        },
         "https://quotes.toscrape.com/author/Allen-Saunders": {
             "frequency": 1,
             "positions": [
@@ -36094,6 +36087,13 @@
                 43
             ]
         },
+        "https://quotes.toscrape.com/author/Mark-Twain": {
+            "frequency": 2,
+            "positions": [
+                59,
+                144
+            ]
+        },
         "https://quotes.toscrape.com/author/Khaled-Hosseini": {
             "frequency": 1,
             "positions": [
@@ -36205,12 +36205,6 @@
                 102
             ]
         },
-        "https://quotes.toscrape.com/author/Mark-Twain": {
-            "frequency": 1,
-            "positions": [
-                174
-            ]
-        },
         "https://quotes.toscrape.com/author/George-Bernard-Shaw": {
             "frequency": 1,
             "positions": [
@@ -36274,6 +36268,12 @@
             "frequency": 1,
             "positions": [
                 225
+            ]
+        },
+        "https://quotes.toscrape.com/author/Mark-Twain": {
+            "frequency": 1,
+            "positions": [
+                174
             ]
         },
         "https://quotes.toscrape.com/author/Ayn-Rand": {
@@ -36822,12 +36822,6 @@
                 16
             ]
         },
-        "https://quotes.toscrape.com/author/Mark-Twain": {
-            "frequency": 1,
-            "positions": [
-                55
-            ]
-        },
         "https://quotes.toscrape.com/author/Dr-Seuss": {
             "frequency": 1,
             "positions": [
@@ -36967,6 +36961,12 @@
             "frequency": 1,
             "positions": [
                 93
+            ]
+        },
+        "https://quotes.toscrape.com/author/Mark-Twain": {
+            "frequency": 1,
+            "positions": [
+                55
             ]
         },
         "https://quotes.toscrape.com/author/J-M-Barrie": {
@@ -38221,16 +38221,16 @@
                 556
             ]
         },
-        "https://quotes.toscrape.com/author/Mark-Twain": {
-            "frequency": 1,
-            "positions": [
-                229
-            ]
-        },
         "https://quotes.toscrape.com/author/Jim-Henson": {
             "frequency": 1,
             "positions": [
                 37
+            ]
+        },
+        "https://quotes.toscrape.com/author/Mark-Twain": {
+            "frequency": 1,
+            "positions": [
+                229
             ]
         }
     },
@@ -39262,12 +39262,6 @@
                 247
             ]
         },
-        "https://quotes.toscrape.com/author/Mark-Twain": {
-            "frequency": 1,
-            "positions": [
-                25
-            ]
-        },
         "https://quotes.toscrape.com/author/Allen-Saunders": {
             "frequency": 1,
             "positions": [
@@ -39419,6 +39413,12 @@
             "frequency": 1,
             "positions": [
                 19
+            ]
+        },
+        "https://quotes.toscrape.com/author/Mark-Twain": {
+            "frequency": 1,
+            "positions": [
+                25
             ]
         },
         "https://quotes.toscrape.com/author/W-C-Fields": {
@@ -40231,12 +40231,6 @@
                 11
             ]
         },
-        "https://quotes.toscrape.com/author/Mark-Twain": {
-            "frequency": 1,
-            "positions": [
-                11
-            ]
-        },
         "https://quotes.toscrape.com/author/Allen-Saunders": {
             "frequency": 1,
             "positions": [
@@ -40349,6 +40343,12 @@
             "frequency": 1,
             "positions": [
                 272
+            ]
+        },
+        "https://quotes.toscrape.com/author/Mark-Twain": {
+            "frequency": 1,
+            "positions": [
+                11
             ]
         },
         "https://quotes.toscrape.com/author/Khaled-Hosseini": {
@@ -42137,12 +42137,6 @@
                 268
             ]
         },
-        "https://quotes.toscrape.com/author/Mark-Twain": {
-            "frequency": 1,
-            "positions": [
-                129
-            ]
-        },
         "https://quotes.toscrape.com/author/Allen-Saunders": {
             "frequency": 2,
             "positions": [
@@ -42214,6 +42208,12 @@
             "frequency": 1,
             "positions": [
                 191
+            ]
+        },
+        "https://quotes.toscrape.com/author/Mark-Twain": {
+            "frequency": 1,
+            "positions": [
+                129
             ]
         },
         "https://quotes.toscrape.com/author/J-R-R-Tolkien": {
@@ -42427,12 +42427,6 @@
                 111
             ]
         },
-        "https://quotes.toscrape.com/author/Mark-Twain": {
-            "frequency": 1,
-            "positions": [
-                17
-            ]
-        },
         "https://quotes.toscrape.com/author/Haruki-Murakami": {
             "frequency": 1,
             "positions": [
@@ -42475,6 +42469,12 @@
             "frequency": 1,
             "positions": [
                 180
+            ]
+        },
+        "https://quotes.toscrape.com/author/Mark-Twain": {
+            "frequency": 1,
+            "positions": [
+                17
             ]
         },
         "https://quotes.toscrape.com/author/J-M-Barrie": {
@@ -43019,12 +43019,6 @@
                 130
             ]
         },
-        "https://quotes.toscrape.com/author/Mark-Twain": {
-            "frequency": 1,
-            "positions": [
-                160
-            ]
-        },
         "https://quotes.toscrape.com/author/Jorge-Luis-Borges": {
             "frequency": 1,
             "positions": [
@@ -43043,6 +43037,12 @@
             "frequency": 1,
             "positions": [
                 133
+            ]
+        },
+        "https://quotes.toscrape.com/author/Mark-Twain": {
+            "frequency": 1,
+            "positions": [
+                160
             ]
         },
         "https://quotes.toscrape.com/author/E-E-Cummings": {
@@ -43496,13 +43496,6 @@
                 175
             ]
         },
-        "https://quotes.toscrape.com/author/Mark-Twain": {
-            "frequency": 2,
-            "positions": [
-                73,
-                233
-            ]
-        },
         "https://quotes.toscrape.com/author/Allen-Saunders": {
             "frequency": 2,
             "positions": [
@@ -43694,6 +43687,13 @@
             "positions": [
                 39,
                 222
+            ]
+        },
+        "https://quotes.toscrape.com/author/Mark-Twain": {
+            "frequency": 2,
+            "positions": [
+                73,
+                233
             ]
         },
         "https://quotes.toscrape.com/author/Khaled-Hosseini": {
@@ -44012,13 +44012,6 @@
                 142
             ]
         },
-        "https://quotes.toscrape.com/author/Mark-Twain": {
-            "frequency": 2,
-            "positions": [
-                198,
-                240
-            ]
-        },
         "https://quotes.toscrape.com/author/Madeleine-LEngle": {
             "frequency": 1,
             "positions": [
@@ -44047,6 +44040,13 @@
             "frequency": 1,
             "positions": [
                 105
+            ]
+        },
+        "https://quotes.toscrape.com/author/Mark-Twain": {
+            "frequency": 2,
+            "positions": [
+                198,
+                240
             ]
         },
         "https://quotes.toscrape.com/author/W-C-Fields": {
@@ -44401,12 +44401,6 @@
                 225
             ]
         },
-        "https://quotes.toscrape.com/author/Mark-Twain": {
-            "frequency": 1,
-            "positions": [
-                208
-            ]
-        },
         "https://quotes.toscrape.com/author/J-D-Salinger": {
             "frequency": 1,
             "positions": [
@@ -44423,6 +44417,12 @@
             "frequency": 1,
             "positions": [
                 4
+            ]
+        },
+        "https://quotes.toscrape.com/author/Mark-Twain": {
+            "frequency": 1,
+            "positions": [
+                208
             ]
         }
     },
@@ -44771,12 +44771,6 @@
                 10
             ]
         },
-        "https://quotes.toscrape.com/author/Mark-Twain": {
-            "frequency": 1,
-            "positions": [
-                10
-            ]
-        },
         "https://quotes.toscrape.com/author/Allen-Saunders": {
             "frequency": 1,
             "positions": [
@@ -44904,6 +44898,12 @@
                 10,
                 271,
                 278
+            ]
+        },
+        "https://quotes.toscrape.com/author/Mark-Twain": {
+            "frequency": 1,
+            "positions": [
+                10
             ]
         },
         "https://quotes.toscrape.com/author/Khaled-Hosseini": {
@@ -45626,12 +45626,6 @@
                 172
             ]
         },
-        "https://quotes.toscrape.com/author/Mark-Twain": {
-            "frequency": 1,
-            "positions": [
-                192
-            ]
-        },
         "https://quotes.toscrape.com/author/Madeleine-LEngle": {
             "frequency": 1,
             "positions": [
@@ -45649,6 +45643,12 @@
             "frequency": 1,
             "positions": [
                 362
+            ]
+        },
+        "https://quotes.toscrape.com/author/Mark-Twain": {
+            "frequency": 1,
+            "positions": [
+                192
             ]
         }
     },
@@ -45809,12 +45809,6 @@
                 41
             ]
         },
-        "https://quotes.toscrape.com/author/Mark-Twain": {
-            "frequency": 1,
-            "positions": [
-                242
-            ]
-        },
         "https://quotes.toscrape.com/author/Dr-Seuss": {
             "frequency": 1,
             "positions": [
@@ -45837,6 +45831,12 @@
             "frequency": 1,
             "positions": [
                 319
+            ]
+        },
+        "https://quotes.toscrape.com/author/Mark-Twain": {
+            "frequency": 1,
+            "positions": [
+                242
             ]
         },
         "https://quotes.toscrape.com/page/5": {
@@ -45883,12 +45883,6 @@
                 15
             ]
         },
-        "https://quotes.toscrape.com/author/Mark-Twain": {
-            "frequency": 1,
-            "positions": [
-                60
-            ]
-        },
         "https://quotes.toscrape.com/author/Allen-Saunders": {
             "frequency": 1,
             "positions": [
@@ -45926,6 +45920,12 @@
             "frequency": 1,
             "positions": [
                 106
+            ]
+        },
+        "https://quotes.toscrape.com/author/Mark-Twain": {
+            "frequency": 1,
+            "positions": [
+                60
             ]
         },
         "https://quotes.toscrape.com/author/W-C-Fields": {
@@ -46318,12 +46318,6 @@
                 84
             ]
         },
-        "https://quotes.toscrape.com/author/Mark-Twain": {
-            "frequency": 1,
-            "positions": [
-                61
-            ]
-        },
         "https://quotes.toscrape.com/author/Allen-Saunders": {
             "frequency": 4,
             "positions": [
@@ -46383,6 +46377,12 @@
             "frequency": 1,
             "positions": [
                 57
+            ]
+        },
+        "https://quotes.toscrape.com/author/Mark-Twain": {
+            "frequency": 1,
+            "positions": [
+                61
             ]
         },
         "https://quotes.toscrape.com/author/E-E-Cummings": {
@@ -46849,14 +46849,6 @@
                 113
             ]
         },
-        "https://quotes.toscrape.com/author/Mark-Twain": {
-            "frequency": 3,
-            "positions": [
-                43,
-                168,
-                207
-            ]
-        },
         "https://quotes.toscrape.com/author/Allen-Saunders": {
             "frequency": 1,
             "positions": [
@@ -46886,6 +46878,14 @@
             "frequency": 1,
             "positions": [
                 162
+            ]
+        },
+        "https://quotes.toscrape.com/author/Mark-Twain": {
+            "frequency": 3,
+            "positions": [
+                43,
+                168,
+                207
             ]
         },
         "https://quotes.toscrape.com/author/W-C-Fields": {
@@ -47009,16 +47009,16 @@
                 97
             ]
         },
-        "https://quotes.toscrape.com/author/Mark-Twain": {
-            "frequency": 1,
-            "positions": [
-                167
-            ]
-        },
         "https://quotes.toscrape.com/author/Jimi-Hendrix": {
             "frequency": 1,
             "positions": [
                 43
+            ]
+        },
+        "https://quotes.toscrape.com/author/Mark-Twain": {
+            "frequency": 1,
+            "positions": [
+                167
             ]
         },
         "https://quotes.toscrape.com/author/Alexandre-Dumas-fils": {
@@ -47182,12 +47182,6 @@
                 378
             ]
         },
-        "https://quotes.toscrape.com/author/Mark-Twain": {
-            "frequency": 1,
-            "positions": [
-                308
-            ]
-        },
         "https://quotes.toscrape.com/author/Ralph-Waldo-Emerson": {
             "frequency": 1,
             "positions": [
@@ -47198,6 +47192,12 @@
             "frequency": 1,
             "positions": [
                 350
+            ]
+        },
+        "https://quotes.toscrape.com/author/Mark-Twain": {
+            "frequency": 1,
+            "positions": [
+                308
             ]
         }
     },
@@ -47337,16 +47337,16 @@
                 1
             ]
         },
-        "https://quotes.toscrape.com/author/Mark-Twain": {
-            "frequency": 1,
-            "positions": [
-                246
-            ]
-        },
         "https://quotes.toscrape.com/author/Dr-Seuss": {
             "frequency": 1,
             "positions": [
                 293
+            ]
+        },
+        "https://quotes.toscrape.com/author/Mark-Twain": {
+            "frequency": 1,
+            "positions": [
+                246
             ]
         },
         "https://quotes.toscrape.com/page/7": {
@@ -48985,12 +48985,6 @@
                 242
             ]
         },
-        "https://quotes.toscrape.com/author/Mark-Twain": {
-            "frequency": 1,
-            "positions": [
-                213
-            ]
-        },
         "https://quotes.toscrape.com/author/Allen-Saunders": {
             "frequency": 1,
             "positions": [
@@ -49161,6 +49155,12 @@
                 147
             ]
         },
+        "https://quotes.toscrape.com/author/Mark-Twain": {
+            "frequency": 1,
+            "positions": [
+                213
+            ]
+        },
         "https://quotes.toscrape.com/tag/good": {
             "frequency": 2,
             "positions": [
@@ -49269,12 +49269,6 @@
                 93
             ]
         },
-        "https://quotes.toscrape.com/author/Mark-Twain": {
-            "frequency": 1,
-            "positions": [
-                20
-            ]
-        },
         "https://quotes.toscrape.com/author/Dr-Seuss": {
             "frequency": 1,
             "positions": [
@@ -49293,6 +49287,12 @@
                 14,
                 33,
                 66
+            ]
+        },
+        "https://quotes.toscrape.com/author/Mark-Twain": {
+            "frequency": 1,
+            "positions": [
+                20
             ]
         }
     },
@@ -49327,12 +49327,6 @@
             "positions": [
                 157,
                 202
-            ]
-        },
-        "https://quotes.toscrape.com/author/Mark-Twain": {
-            "frequency": 1,
-            "positions": [
-                21
             ]
         },
         "https://quotes.toscrape.com/author/Allen-Saunders": {
@@ -49415,6 +49409,12 @@
             "positions": [
                 217,
                 267
+            ]
+        },
+        "https://quotes.toscrape.com/author/Mark-Twain": {
+            "frequency": 1,
+            "positions": [
+                21
             ]
         },
         "https://quotes.toscrape.com/author/W-C-Fields": {
@@ -50555,12 +50555,6 @@
                 93
             ]
         },
-        "https://quotes.toscrape.com/author/Mark-Twain": {
-            "frequency": 1,
-            "positions": [
-                260
-            ]
-        },
         "https://quotes.toscrape.com/author/Allen-Saunders": {
             "frequency": 1,
             "positions": [
@@ -50571,6 +50565,12 @@
             "frequency": 1,
             "positions": [
                 241
+            ]
+        },
+        "https://quotes.toscrape.com/author/Mark-Twain": {
+            "frequency": 1,
+            "positions": [
+                260
             ]
         },
         "https://quotes.toscrape.com/author/E-E-Cummings": {
@@ -50625,13 +50625,6 @@
             "positions": [
                 223,
                 347
-            ]
-        },
-        "https://quotes.toscrape.com/author/Mark-Twain": {
-            "frequency": 2,
-            "positions": [
-                162,
-                265
             ]
         },
         "https://quotes.toscrape.com/author/George-Bernard-Shaw": {
@@ -50700,6 +50693,13 @@
             "frequency": 1,
             "positions": [
                 146
+            ]
+        },
+        "https://quotes.toscrape.com/author/Mark-Twain": {
+            "frequency": 2,
+            "positions": [
+                162,
+                265
             ]
         },
         "https://quotes.toscrape.com/author/W-C-Fields": {
@@ -50926,14 +50926,6 @@
                 45
             ]
         },
-        "https://quotes.toscrape.com/author/Mark-Twain": {
-            "frequency": 3,
-            "positions": [
-                182,
-                211,
-                307
-            ]
-        },
         "https://quotes.toscrape.com/author/Allen-Saunders": {
             "frequency": 2,
             "positions": [
@@ -51122,6 +51114,14 @@
             "positions": [
                 205,
                 262
+            ]
+        },
+        "https://quotes.toscrape.com/author/Mark-Twain": {
+            "frequency": 3,
+            "positions": [
+                182,
+                211,
+                307
             ]
         },
         "https://quotes.toscrape.com/author/Khaled-Hosseini": {
@@ -51322,14 +51322,6 @@
                 71
             ]
         },
-        "https://quotes.toscrape.com/author/Mark-Twain": {
-            "frequency": 3,
-            "positions": [
-                41,
-                165,
-                299
-            ]
-        },
         "https://quotes.toscrape.com/author/Dr-Seuss": {
             "frequency": 3,
             "positions": [
@@ -51392,6 +51384,14 @@
             "frequency": 1,
             "positions": [
                 290
+            ]
+        },
+        "https://quotes.toscrape.com/author/Mark-Twain": {
+            "frequency": 3,
+            "positions": [
+                41,
+                165,
+                299
             ]
         },
         "https://quotes.toscrape.com/author/J-R-R-Tolkien": {
@@ -51601,13 +51601,6 @@
                 314
             ]
         },
-        "https://quotes.toscrape.com/author/Mark-Twain": {
-            "frequency": 2,
-            "positions": [
-                157,
-                257
-            ]
-        },
         "https://quotes.toscrape.com/author/Dr-Seuss": {
             "frequency": 3,
             "positions": [
@@ -51671,6 +51664,13 @@
             "frequency": 1,
             "positions": [
                 194
+            ]
+        },
+        "https://quotes.toscrape.com/author/Mark-Twain": {
+            "frequency": 2,
+            "positions": [
+                157,
+                257
             ]
         },
         "https://quotes.toscrape.com/author/Khaled-Hosseini": {
@@ -52146,12 +52146,6 @@
                 77
             ]
         },
-        "https://quotes.toscrape.com/author/Mark-Twain": {
-            "frequency": 1,
-            "positions": [
-                32
-            ]
-        },
         "https://quotes.toscrape.com/author/Suzanne-Collins": {
             "frequency": 1,
             "positions": [
@@ -52182,6 +52176,12 @@
             "frequency": 1,
             "positions": [
                 235
+            ]
+        },
+        "https://quotes.toscrape.com/author/Mark-Twain": {
+            "frequency": 1,
+            "positions": [
+                32
             ]
         },
         "https://quotes.toscrape.com/author/E-E-Cummings": {
@@ -54193,12 +54193,6 @@
                 149
             ]
         },
-        "https://quotes.toscrape.com/author/Mark-Twain": {
-            "frequency": 1,
-            "positions": [
-                297
-            ]
-        },
         "https://quotes.toscrape.com/author/William-Nicholson": {
             "frequency": 2,
             "positions": [
@@ -54216,6 +54210,12 @@
             "frequency": 1,
             "positions": [
                 131
+            ]
+        },
+        "https://quotes.toscrape.com/author/Mark-Twain": {
+            "frequency": 1,
+            "positions": [
+                297
             ]
         },
         "https://quotes.toscrape.com/author/W-C-Fields": {
@@ -54669,12 +54669,6 @@
                 174
             ]
         },
-        "https://quotes.toscrape.com/author/Mark-Twain": {
-            "frequency": 1,
-            "positions": [
-                133
-            ]
-        },
         "https://quotes.toscrape.com/author/Allen-Saunders": {
             "frequency": 3,
             "positions": [
@@ -54750,6 +54744,12 @@
             "frequency": 1,
             "positions": [
                 215
+            ]
+        },
+        "https://quotes.toscrape.com/author/Mark-Twain": {
+            "frequency": 1,
+            "positions": [
+                133
             ]
         },
         "https://quotes.toscrape.com/author/J-R-R-Tolkien": {
@@ -54862,12 +54862,6 @@
                 144
             ]
         },
-        "https://quotes.toscrape.com/author/Mark-Twain": {
-            "frequency": 1,
-            "positions": [
-                136
-            ]
-        },
         "https://quotes.toscrape.com/author/Ernest-Hemingway": {
             "frequency": 2,
             "positions": [
@@ -54925,6 +54919,12 @@
                 72,
                 266,
                 282
+            ]
+        },
+        "https://quotes.toscrape.com/author/Mark-Twain": {
+            "frequency": 1,
+            "positions": [
+                136
             ]
         },
         "https://quotes.toscrape.com/author/Harper-Lee": {
@@ -55859,12 +55859,6 @@
                 242
             ]
         },
-        "https://quotes.toscrape.com/author/Mark-Twain": {
-            "frequency": 1,
-            "positions": [
-                190
-            ]
-        },
         "https://quotes.toscrape.com/tag/contentment": {
             "frequency": 2,
             "positions": [
@@ -55939,6 +55933,12 @@
             "positions": [
                 102,
                 142
+            ]
+        },
+        "https://quotes.toscrape.com/author/Mark-Twain": {
+            "frequency": 1,
+            "positions": [
+                190
             ]
         },
         "https://quotes.toscrape.com/author/E-E-Cummings": {
@@ -56208,12 +56208,6 @@
                 186
             ]
         },
-        "https://quotes.toscrape.com/author/Mark-Twain": {
-            "frequency": 1,
-            "positions": [
-                295
-            ]
-        },
         "https://quotes.toscrape.com/author/George-Bernard-Shaw": {
             "frequency": 1,
             "positions": [
@@ -56250,6 +56244,12 @@
             "positions": [
                 59,
                 226
+            ]
+        },
+        "https://quotes.toscrape.com/author/Mark-Twain": {
+            "frequency": 1,
+            "positions": [
+                295
             ]
         },
         "https://quotes.toscrape.com/author/W-C-Fields": {
@@ -56656,12 +56656,6 @@
                 39
             ]
         },
-        "https://quotes.toscrape.com/author/Mark-Twain": {
-            "frequency": 1,
-            "positions": [
-                261
-            ]
-        },
         "https://quotes.toscrape.com/author/Haruki-Murakami": {
             "frequency": 1,
             "positions": [
@@ -56684,6 +56678,12 @@
             "frequency": 1,
             "positions": [
                 103
+            ]
+        },
+        "https://quotes.toscrape.com/author/Mark-Twain": {
+            "frequency": 1,
+            "positions": [
+                261
             ]
         },
         "https://quotes.toscrape.com/page/7": {
@@ -56782,12 +56782,6 @@
                 480
             ]
         },
-        "https://quotes.toscrape.com/author/Mark-Twain": {
-            "frequency": 1,
-            "positions": [
-                148
-            ]
-        },
         "https://quotes.toscrape.com/tag/humor/page/2": {
             "frequency": 1,
             "positions": [
@@ -56804,6 +56798,12 @@
             "frequency": 1,
             "positions": [
                 68
+            ]
+        },
+        "https://quotes.toscrape.com/author/Mark-Twain": {
+            "frequency": 1,
+            "positions": [
+                148
             ]
         },
         "https://quotes.toscrape.com/tag/romantic": {
@@ -56957,12 +56957,6 @@
                 204
             ]
         },
-        "https://quotes.toscrape.com/author/Mark-Twain": {
-            "frequency": 1,
-            "positions": [
-                101
-            ]
-        },
         "https://quotes.toscrape.com/author/George-Bernard-Shaw": {
             "frequency": 1,
             "positions": [
@@ -57035,6 +57029,12 @@
             "positions": [
                 60,
                 154
+            ]
+        },
+        "https://quotes.toscrape.com/author/Mark-Twain": {
+            "frequency": 1,
+            "positions": [
+                101
             ]
         },
         "https://quotes.toscrape.com/author/J-M-Barrie": {
@@ -57153,12 +57153,6 @@
             "positions": [
                 64,
                 218
-            ]
-        },
-        "https://quotes.toscrape.com/author/Mark-Twain": {
-            "frequency": 1,
-            "positions": [
-                253
             ]
         },
         "https://quotes.toscrape.com/author/George-Bernard-Shaw": {
@@ -57287,6 +57281,12 @@
             "positions": [
                 251,
                 325
+            ]
+        },
+        "https://quotes.toscrape.com/author/Mark-Twain": {
+            "frequency": 1,
+            "positions": [
+                253
             ]
         },
         "https://quotes.toscrape.com/tag/good": {
@@ -58023,12 +58023,6 @@
                 164
             ]
         },
-        "https://quotes.toscrape.com/author/Mark-Twain": {
-            "frequency": 1,
-            "positions": [
-                302
-            ]
-        },
         "https://quotes.toscrape.com/author/Allen-Saunders": {
             "frequency": 1,
             "positions": [
@@ -58057,6 +58051,12 @@
             "frequency": 1,
             "positions": [
                 30
+            ]
+        },
+        "https://quotes.toscrape.com/author/Mark-Twain": {
+            "frequency": 1,
+            "positions": [
+                302
             ]
         },
         "https://quotes.toscrape.com/author/Khaled-Hosseini": {
@@ -60988,12 +60988,6 @@
                 65
             ]
         },
-        "https://quotes.toscrape.com/author/Mark-Twain": {
-            "frequency": 1,
-            "positions": [
-                159
-            ]
-        },
         "https://quotes.toscrape.com/author/J-D-Salinger": {
             "frequency": 1,
             "positions": [
@@ -61034,6 +61028,12 @@
             "frequency": 1,
             "positions": [
                 105
+            ]
+        },
+        "https://quotes.toscrape.com/author/Mark-Twain": {
+            "frequency": 1,
+            "positions": [
+                159
             ]
         },
         "https://quotes.toscrape.com/page/4": {
@@ -63108,12 +63108,6 @@
                 60
             ]
         },
-        "https://quotes.toscrape.com/author/Mark-Twain": {
-            "frequency": 1,
-            "positions": [
-                123
-            ]
-        },
         "https://quotes.toscrape.com/author/Allen-Saunders": {
             "frequency": 1,
             "positions": [
@@ -63164,6 +63158,12 @@
             "positions": [
                 46,
                 255
+            ]
+        },
+        "https://quotes.toscrape.com/author/Mark-Twain": {
+            "frequency": 1,
+            "positions": [
+                123
             ]
         },
         "https://quotes.toscrape.com/author/E-E-Cummings": {
@@ -63246,16 +63246,16 @@
                 188
             ]
         },
-        "https://quotes.toscrape.com/author/Mark-Twain": {
-            "frequency": 1,
-            "positions": [
-                111
-            ]
-        },
         "https://quotes.toscrape.com/author/Suzanne-Collins": {
             "frequency": 1,
             "positions": [
                 99
+            ]
+        },
+        "https://quotes.toscrape.com/author/Mark-Twain": {
+            "frequency": 1,
+            "positions": [
+                111
             ]
         },
         "https://quotes.toscrape.com/page/4": {
@@ -64388,12 +64388,6 @@
                 246
             ]
         },
-        "https://quotes.toscrape.com/author/Mark-Twain": {
-            "frequency": 1,
-            "positions": [
-                125
-            ]
-        },
         "https://quotes.toscrape.com/author/James-Baldwin": {
             "frequency": 1,
             "positions": [
@@ -64404,6 +64398,12 @@
             "frequency": 1,
             "positions": [
                 109
+            ]
+        },
+        "https://quotes.toscrape.com/author/Mark-Twain": {
+            "frequency": 1,
+            "positions": [
+                125
             ]
         },
         "https://quotes.toscrape.com/author/E-E-Cummings": {
@@ -64432,13 +64432,6 @@
                 11
             ]
         },
-        "https://quotes.toscrape.com/author/Mark-Twain": {
-            "frequency": 2,
-            "positions": [
-                36,
-                48
-            ]
-        },
         "https://quotes.toscrape.com/author/Allen-Saunders": {
             "frequency": 1,
             "positions": [
@@ -64462,6 +64455,13 @@
             "positions": [
                 152,
                 156
+            ]
+        },
+        "https://quotes.toscrape.com/author/Mark-Twain": {
+            "frequency": 2,
+            "positions": [
+                36,
+                48
             ]
         },
         "https://quotes.toscrape.com/author/J-M-Barrie": {
@@ -66236,13 +66236,6 @@
                 39
             ]
         },
-        "https://quotes.toscrape.com/author/Mark-Twain": {
-            "frequency": 2,
-            "positions": [
-                0,
-                22
-            ]
-        },
         "https://quotes.toscrape.com/tag/contentment": {
             "frequency": 1,
             "positions": [
@@ -66266,6 +66259,13 @@
             "positions": [
                 17,
                 20
+            ]
+        },
+        "https://quotes.toscrape.com/author/Mark-Twain": {
+            "frequency": 2,
+            "positions": [
+                0,
+                22
             ]
         },
         "https://quotes.toscrape.com/page/7": {
@@ -66359,17 +66359,6 @@
                 40
             ]
         },
-        "https://quotes.toscrape.com/author/Mark-Twain": {
-            "frequency": 6,
-            "positions": [
-                1,
-                23,
-                53,
-                161,
-                247,
-                300
-            ]
-        },
         "https://quotes.toscrape.com/tag/contentment": {
             "frequency": 1,
             "positions": [
@@ -66387,6 +66376,17 @@
             "positions": [
                 18,
                 21
+            ]
+        },
+        "https://quotes.toscrape.com/author/Mark-Twain": {
+            "frequency": 6,
+            "positions": [
+                1,
+                23,
+                53,
+                161,
+                247,
+                300
             ]
         },
         "https://quotes.toscrape.com/page/7": {
@@ -68643,16 +68643,16 @@
                 290
             ]
         },
-        "https://quotes.toscrape.com/author/Mark-Twain": {
-            "frequency": 1,
-            "positions": [
-                64
-            ]
-        },
         "https://quotes.toscrape.com/author/Suzanne-Collins": {
             "frequency": 1,
             "positions": [
                 150
+            ]
+        },
+        "https://quotes.toscrape.com/author/Mark-Twain": {
+            "frequency": 1,
+            "positions": [
+                64
             ]
         },
         "https://quotes.toscrape.com/author/J-M-Barrie": {
@@ -68837,12 +68837,6 @@
                 33
             ]
         },
-        "https://quotes.toscrape.com/author/Mark-Twain": {
-            "frequency": 1,
-            "positions": [
-                172
-            ]
-        },
         "https://quotes.toscrape.com/author/Allen-Saunders": {
             "frequency": 1,
             "positions": [
@@ -68968,6 +68962,12 @@
                 285
             ]
         },
+        "https://quotes.toscrape.com/author/Mark-Twain": {
+            "frequency": 1,
+            "positions": [
+                172
+            ]
+        },
         "https://quotes.toscrape.com/author/E-E-Cummings": {
             "frequency": 2,
             "positions": [
@@ -69025,12 +69025,6 @@
             "positions": [
                 45,
                 62
-            ]
-        },
-        "https://quotes.toscrape.com/author/Mark-Twain": {
-            "frequency": 1,
-            "positions": [
-                305
             ]
         },
         "https://quotes.toscrape.com/author/Dr-Seuss": {
@@ -69105,6 +69099,12 @@
             "frequency": 1,
             "positions": [
                 212
+            ]
+        },
+        "https://quotes.toscrape.com/author/Mark-Twain": {
+            "frequency": 1,
+            "positions": [
+                305
             ]
         },
         "https://quotes.toscrape.com/author/Alexandre-Dumas-fils": {
@@ -69228,12 +69228,6 @@
                 183
             ]
         },
-        "https://quotes.toscrape.com/author/Mark-Twain": {
-            "frequency": 1,
-            "positions": [
-                183
-            ]
-        },
         "https://quotes.toscrape.com/author/Allen-Saunders": {
             "frequency": 1,
             "positions": [
@@ -69271,6 +69265,12 @@
             "positions": [
                 113,
                 173
+            ]
+        },
+        "https://quotes.toscrape.com/author/Mark-Twain": {
+            "frequency": 1,
+            "positions": [
+                183
             ]
         },
         "https://quotes.toscrape.com/author/E-E-Cummings": {
@@ -69384,17 +69384,17 @@
                 89
             ]
         },
-        "https://quotes.toscrape.com/author/Mark-Twain": {
-            "frequency": 1,
-            "positions": [
-                87
-            ]
-        },
         "https://quotes.toscrape.com/author/William-Nicholson": {
             "frequency": 2,
             "positions": [
                 213,
                 288
+            ]
+        },
+        "https://quotes.toscrape.com/author/Mark-Twain": {
+            "frequency": 1,
+            "positions": [
+                87
             ]
         }
     },
@@ -69411,12 +69411,6 @@
                 80
             ]
         },
-        "https://quotes.toscrape.com/author/Mark-Twain": {
-            "frequency": 1,
-            "positions": [
-                88
-            ]
-        },
         "https://quotes.toscrape.com/author/Stephenie-Meyer": {
             "frequency": 1,
             "positions": [
@@ -69429,6 +69423,12 @@
                 66,
                 74,
                 83
+            ]
+        },
+        "https://quotes.toscrape.com/author/Mark-Twain": {
+            "frequency": 1,
+            "positions": [
+                88
             ]
         },
         "https://quotes.toscrape.com/author/Khaled-Hosseini": {
@@ -69485,12 +69485,6 @@
                 114
             ]
         },
-        "https://quotes.toscrape.com/author/Mark-Twain": {
-            "frequency": 1,
-            "positions": [
-                193
-            ]
-        },
         "https://quotes.toscrape.com/author/Ernest-Hemingway": {
             "frequency": 1,
             "positions": [
@@ -69501,6 +69495,12 @@
             "frequency": 1,
             "positions": [
                 81
+            ]
+        },
+        "https://quotes.toscrape.com/author/Mark-Twain": {
+            "frequency": 1,
+            "positions": [
+                193
             ]
         },
         "https://quotes.toscrape.com/author/E-E-Cummings": {
@@ -70588,12 +70588,6 @@
                 59
             ]
         },
-        "https://quotes.toscrape.com/author/Mark-Twain": {
-            "frequency": 1,
-            "positions": [
-                281
-            ]
-        },
         "https://quotes.toscrape.com/author/Dr-Seuss": {
             "frequency": 2,
             "positions": [
@@ -70688,6 +70682,12 @@
                 221
             ]
         },
+        "https://quotes.toscrape.com/author/Mark-Twain": {
+            "frequency": 1,
+            "positions": [
+                281
+            ]
+        },
         "https://quotes.toscrape.com/tag/adventure": {
             "frequency": 1,
             "positions": [
@@ -70752,12 +70752,6 @@
                 49
             ]
         },
-        "https://quotes.toscrape.com/author/Mark-Twain": {
-            "frequency": 1,
-            "positions": [
-                110
-            ]
-        },
         "https://quotes.toscrape.com/author/Haruki-Murakami": {
             "frequency": 1,
             "positions": [
@@ -70810,6 +70804,12 @@
             "frequency": 1,
             "positions": [
                 6
+            ]
+        },
+        "https://quotes.toscrape.com/author/Mark-Twain": {
+            "frequency": 1,
+            "positions": [
+                110
             ]
         },
         "https://quotes.toscrape.com/author/J-M-Barrie": {
@@ -71262,16 +71262,16 @@
                 116
             ]
         },
-        "https://quotes.toscrape.com/author/Mark-Twain": {
-            "frequency": 1,
-            "positions": [
-                151
-            ]
-        },
         "https://quotes.toscrape.com/author/Madeleine-LEngle": {
             "frequency": 1,
             "positions": [
                 342
+            ]
+        },
+        "https://quotes.toscrape.com/author/Mark-Twain": {
+            "frequency": 1,
+            "positions": [
+                151
             ]
         }
     },
@@ -72744,12 +72744,6 @@
                 31
             ]
         },
-        "https://quotes.toscrape.com/author/Mark-Twain": {
-            "frequency": 1,
-            "positions": [
-                27
-            ]
-        },
         "https://quotes.toscrape.com/author/Ernest-Hemingway": {
             "frequency": 1,
             "positions": [
@@ -72831,6 +72825,12 @@
             "frequency": 1,
             "positions": [
                 257
+            ]
+        },
+        "https://quotes.toscrape.com/author/Mark-Twain": {
+            "frequency": 1,
+            "positions": [
+                27
             ]
         },
         "https://quotes.toscrape.com/author/J-M-Barrie": {
@@ -73141,16 +73141,16 @@
                 210
             ]
         },
-        "https://quotes.toscrape.com/author/Mark-Twain": {
-            "frequency": 1,
-            "positions": [
-                231
-            ]
-        },
         "https://quotes.toscrape.com/tag/library": {
             "frequency": 1,
             "positions": [
                 18
+            ]
+        },
+        "https://quotes.toscrape.com/author/Mark-Twain": {
+            "frequency": 1,
+            "positions": [
+                231
             ]
         },
         "https://quotes.toscrape.com/page/9": {
@@ -76155,15 +76155,6 @@
                 27
             ]
         },
-        "https://quotes.toscrape.com/author/Mark-Twain": {
-            "frequency": 4,
-            "positions": [
-                26,
-                44,
-                291,
-                304
-            ]
-        },
         "https://quotes.toscrape.com/author/Allen-Saunders": {
             "frequency": 1,
             "positions": [
@@ -76262,6 +76253,15 @@
             "positions": [
                 17,
                 126
+            ]
+        },
+        "https://quotes.toscrape.com/author/Mark-Twain": {
+            "frequency": 4,
+            "positions": [
+                26,
+                44,
+                291,
+                304
             ]
         },
         "https://quotes.toscrape.com/author/W-C-Fields": {
@@ -76995,12 +76995,6 @@
                 99
             ]
         },
-        "https://quotes.toscrape.com/author/Mark-Twain": {
-            "frequency": 1,
-            "positions": [
-                154
-            ]
-        },
         "https://quotes.toscrape.com/author/Jorge-Luis-Borges": {
             "frequency": 1,
             "positions": [
@@ -77012,6 +77006,12 @@
             "positions": [
                 167,
                 243
+            ]
+        },
+        "https://quotes.toscrape.com/author/Mark-Twain": {
+            "frequency": 1,
+            "positions": [
+                154
             ]
         },
         "https://quotes.toscrape.com/author/E-E-Cummings": {
@@ -78250,12 +78250,6 @@
                 116
             ]
         },
-        "https://quotes.toscrape.com/author/Mark-Twain": {
-            "frequency": 1,
-            "positions": [
-                290
-            ]
-        },
         "https://quotes.toscrape.com/author/George-Carlin": {
             "frequency": 1,
             "positions": [
@@ -78281,6 +78275,12 @@
             "positions": [
                 308,
                 322
+            ]
+        },
+        "https://quotes.toscrape.com/author/Mark-Twain": {
+            "frequency": 1,
+            "positions": [
+                290
             ]
         },
         "https://quotes.toscrape.com/author/W-C-Fields": {
@@ -78413,12 +78413,6 @@
                 4
             ]
         },
-        "https://quotes.toscrape.com/author/Mark-Twain": {
-            "frequency": 1,
-            "positions": [
-                3
-            ]
-        },
         "https://quotes.toscrape.com/author/Allen-Saunders": {
             "frequency": 1,
             "positions": [
@@ -78452,6 +78446,12 @@
             ]
         },
         "https://quotes.toscrape.com/author/Jimi-Hendrix": {
+            "frequency": 1,
+            "positions": [
+                3
+            ]
+        },
+        "https://quotes.toscrape.com/author/Mark-Twain": {
             "frequency": 1,
             "positions": [
                 3
@@ -80046,12 +80046,6 @@
                 22
             ]
         },
-        "https://quotes.toscrape.com/author/Mark-Twain": {
-            "frequency": 1,
-            "positions": [
-                200
-            ]
-        },
         "https://quotes.toscrape.com/author/Charles-Bukowski": {
             "frequency": 1,
             "positions": [
@@ -80092,6 +80086,12 @@
                 9,
                 19,
                 22
+            ]
+        },
+        "https://quotes.toscrape.com/author/Mark-Twain": {
+            "frequency": 1,
+            "positions": [
+                200
             ]
         }
     },
@@ -81377,12 +81377,6 @@
                 62
             ]
         },
-        "https://quotes.toscrape.com/author/Mark-Twain": {
-            "frequency": 1,
-            "positions": [
-                91
-            ]
-        },
         "https://quotes.toscrape.com/author/Allen-Saunders": {
             "frequency": 3,
             "positions": [
@@ -81405,6 +81399,12 @@
                 310
             ]
         },
+        "https://quotes.toscrape.com/author/Mark-Twain": {
+            "frequency": 1,
+            "positions": [
+                91
+            ]
+        },
         "https://quotes.toscrape.com/author/Harper-Lee": {
             "frequency": 1,
             "positions": [
@@ -81417,12 +81417,6 @@
             "frequency": 1,
             "positions": [
                 63
-            ]
-        },
-        "https://quotes.toscrape.com/author/Mark-Twain": {
-            "frequency": 1,
-            "positions": [
-                131
             ]
         },
         "https://quotes.toscrape.com/author/Allen-Saunders": {
@@ -81442,6 +81436,12 @@
             "frequency": 1,
             "positions": [
                 119
+            ]
+        },
+        "https://quotes.toscrape.com/author/Mark-Twain": {
+            "frequency": 1,
+            "positions": [
+                131
             ]
         }
     },
@@ -81736,12 +81736,6 @@
                 280
             ]
         },
-        "https://quotes.toscrape.com/author/Mark-Twain": {
-            "frequency": 1,
-            "positions": [
-                83
-            ]
-        },
         "https://quotes.toscrape.com/author/George-Bernard-Shaw": {
             "frequency": 1,
             "positions": [
@@ -81752,6 +81746,12 @@
             "frequency": 1,
             "positions": [
                 254
+            ]
+        },
+        "https://quotes.toscrape.com/author/Mark-Twain": {
+            "frequency": 1,
+            "positions": [
+                83
             ]
         }
     },
@@ -86448,16 +86448,16 @@
                 134
             ]
         },
-        "https://quotes.toscrape.com/author/Mark-Twain": {
-            "frequency": 1,
-            "positions": [
-                4
-            ]
-        },
         "https://quotes.toscrape.com/author/James-Baldwin": {
             "frequency": 1,
             "positions": [
                 313
+            ]
+        },
+        "https://quotes.toscrape.com/author/Mark-Twain": {
+            "frequency": 1,
+            "positions": [
+                4
             ]
         },
         "https://quotes.toscrape.com/author/Harper-Lee": {
@@ -87903,12 +87903,6 @@
                 226
             ]
         },
-        "https://quotes.toscrape.com/author/Mark-Twain": {
-            "frequency": 1,
-            "positions": [
-                237
-            ]
-        },
         "https://quotes.toscrape.com/author/Dr-Seuss": {
             "frequency": 1,
             "positions": [
@@ -87932,6 +87926,12 @@
             "frequency": 1,
             "positions": [
                 104
+            ]
+        },
+        "https://quotes.toscrape.com/author/Mark-Twain": {
+            "frequency": 1,
+            "positions": [
+                237
             ]
         }
     },
@@ -88539,12 +88539,6 @@
                 36
             ]
         },
-        "https://quotes.toscrape.com/author/Mark-Twain": {
-            "frequency": 1,
-            "positions": [
-                114
-            ]
-        },
         "https://quotes.toscrape.com/author/Dr-Seuss": {
             "frequency": 1,
             "positions": [
@@ -88591,6 +88585,12 @@
             "frequency": 1,
             "positions": [
                 19
+            ]
+        },
+        "https://quotes.toscrape.com/author/Mark-Twain": {
+            "frequency": 1,
+            "positions": [
+                114
             ]
         },
         "https://quotes.toscrape.com/page/8": {
@@ -89212,12 +89212,6 @@
                 102
             ]
         },
-        "https://quotes.toscrape.com/author/Mark-Twain": {
-            "frequency": 1,
-            "positions": [
-                149
-            ]
-        },
         "https://quotes.toscrape.com/author/Haruki-Murakami": {
             "frequency": 1,
             "positions": [
@@ -89236,6 +89230,12 @@
                 30,
                 213,
                 585
+            ]
+        },
+        "https://quotes.toscrape.com/author/Mark-Twain": {
+            "frequency": 1,
+            "positions": [
+                149
             ]
         },
         "https://quotes.toscrape.com/author/E-E-Cummings": {
@@ -89629,12 +89629,6 @@
                 143
             ]
         },
-        "https://quotes.toscrape.com/author/Mark-Twain": {
-            "frequency": 1,
-            "positions": [
-                235
-            ]
-        },
         "https://quotes.toscrape.com/author/Bob-Marley": {
             "frequency": 1,
             "positions": [
@@ -89645,6 +89639,12 @@
             "frequency": 1,
             "positions": [
                 66
+            ]
+        },
+        "https://quotes.toscrape.com/author/Mark-Twain": {
+            "frequency": 1,
+            "positions": [
+                235
             ]
         }
     },
@@ -90030,16 +90030,16 @@
                 202
             ]
         },
-        "https://quotes.toscrape.com/author/Mark-Twain": {
-            "frequency": 1,
-            "positions": [
-                121
-            ]
-        },
         "https://quotes.toscrape.com/author/William-Nicholson": {
             "frequency": 1,
             "positions": [
                 222
+            ]
+        },
+        "https://quotes.toscrape.com/author/Mark-Twain": {
+            "frequency": 1,
+            "positions": [
+                121
             ]
         }
     },
@@ -90665,12 +90665,6 @@
                 109
             ]
         },
-        "https://quotes.toscrape.com/author/Mark-Twain": {
-            "frequency": 1,
-            "positions": [
-                84
-            ]
-        },
         "https://quotes.toscrape.com/author/Dr-Seuss": {
             "frequency": 1,
             "positions": [
@@ -90681,6 +90675,12 @@
             "frequency": 1,
             "positions": [
                 537
+            ]
+        },
+        "https://quotes.toscrape.com/author/Mark-Twain": {
+            "frequency": 1,
+            "positions": [
+                84
             ]
         }
     },
@@ -90766,12 +90766,6 @@
                 275
             ]
         },
-        "https://quotes.toscrape.com/author/Mark-Twain": {
-            "frequency": 1,
-            "positions": [
-                215
-            ]
-        },
         "https://quotes.toscrape.com/author/Ralph-Waldo-Emerson": {
             "frequency": 2,
             "positions": [
@@ -90801,6 +90795,12 @@
             "frequency": 1,
             "positions": [
                 180
+            ]
+        },
+        "https://quotes.toscrape.com/author/Mark-Twain": {
+            "frequency": 1,
+            "positions": [
+                215
             ]
         }
     },
@@ -91181,16 +91181,16 @@
                 276
             ]
         },
-        "https://quotes.toscrape.com/author/Mark-Twain": {
-            "frequency": 1,
-            "positions": [
-                145
-            ]
-        },
         "https://quotes.toscrape.com/author/Charles-M-Schulz": {
             "frequency": 1,
             "positions": [
                 25
+            ]
+        },
+        "https://quotes.toscrape.com/author/Mark-Twain": {
+            "frequency": 1,
+            "positions": [
+                145
             ]
         }
     },
@@ -92224,854 +92224,6 @@
             "frequency": 1,
             "positions": [
                 282
-            ]
-        }
-    },
-    "1835": {
-        "https://quotes.toscrape.com/author/Mark-Twain": {
-            "frequency": 1,
-            "positions": [
-                5
-            ]
-        }
-    },
-    "florida": {
-        "https://quotes.toscrape.com/author/Mark-Twain": {
-            "frequency": 1,
-            "positions": [
-                7
-            ]
-        },
-        "https://quotes.toscrape.com/author/Ernest-Hemingway": {
-            "frequency": 1,
-            "positions": [
-                342
-            ]
-        },
-        "https://quotes.toscrape.com/author/Madeleine-LEngle": {
-            "frequency": 1,
-            "positions": [
-                206
-            ]
-        }
-    },
-    "missouri": {
-        "https://quotes.toscrape.com/author/Mark-Twain": {
-            "frequency": 2,
-            "positions": [
-                8,
-                58
-            ]
-        }
-    },
-    "samuel": {
-        "https://quotes.toscrape.com/author/Mark-Twain": {
-            "frequency": 1,
-            "positions": [
-                13
-            ]
-        }
-    },
-    "langhorn": {
-        "https://quotes.toscrape.com/author/Mark-Twain": {
-            "frequency": 1,
-            "positions": [
-                14
-            ]
-        }
-    },
-    "clemen": {
-        "https://quotes.toscrape.com/author/Mark-Twain": {
-            "frequency": 1,
-            "positions": [
-                15
-            ]
-        }
-    },
-    "humorist": {
-        "https://quotes.toscrape.com/author/Mark-Twain": {
-            "frequency": 2,
-            "positions": [
-                29,
-                292
-            ]
-        },
-        "https://quotes.toscrape.com/author/Garrison-Keillor": {
-            "frequency": 1,
-            "positions": [
-                31
-            ]
-        }
-    },
-    "huckleberri": {
-        "https://quotes.toscrape.com/author/Mark-Twain": {
-            "frequency": 2,
-            "positions": [
-                38,
-                66
-            ]
-        }
-    },
-    "finn": {
-        "https://quotes.toscrape.com/author/Mark-Twain": {
-            "frequency": 2,
-            "positions": [
-                39,
-                67
-            ]
-        }
-    },
-    "1885": {
-        "https://quotes.toscrape.com/author/Mark-Twain": {
-            "frequency": 1,
-            "positions": [
-                40
-            ]
-        }
-    },
-    "tom": {
-        "https://quotes.toscrape.com/author/Mark-Twain": {
-            "frequency": 2,
-            "positions": [
-                50,
-                69
-            ]
-        }
-    },
-    "sawyer": {
-        "https://quotes.toscrape.com/author/Mark-Twain": {
-            "frequency": 2,
-            "positions": [
-                51,
-                70
-            ]
-        }
-    },
-    "1876": {
-        "https://quotes.toscrape.com/author/Mark-Twain": {
-            "frequency": 1,
-            "positions": [
-                52
-            ]
-        }
-    },
-    "grew": {
-        "https://quotes.toscrape.com/author/Mark-Twain": {
-            "frequency": 1,
-            "positions": [
-                54
-            ]
-        },
-        "https://quotes.toscrape.com/author/Haruki-Murakami": {
-            "frequency": 1,
-            "positions": [
-                62
-            ]
-        },
-        "https://quotes.toscrape.com/author/Madeleine-LEngle": {
-            "frequency": 1,
-            "positions": [
-                386
-            ]
-        },
-        "https://quotes.toscrape.com/author/Charles-Bukowski": {
-            "frequency": 1,
-            "positions": [
-                118
-            ]
-        },
-        "https://quotes.toscrape.com/author/William-Nicholson": {
-            "frequency": 1,
-            "positions": [
-                41
-            ]
-        }
-    },
-    "hannib": {
-        "https://quotes.toscrape.com/author/Mark-Twain": {
-            "frequency": 1,
-            "positions": [
-                57
-            ]
-        }
-    },
-    "provid": {
-        "https://quotes.toscrape.com/author/Mark-Twain": {
-            "frequency": 1,
-            "positions": [
-                62
-            ]
-        },
-        "https://quotes.toscrape.com/author/Garrison-Keillor": {
-            "frequency": 1,
-            "positions": [
-                417
-            ]
-        },
-        "https://quotes.toscrape.com/author/James-Baldwin": {
-            "frequency": 1,
-            "positions": [
-                288
-            ]
-        },
-        "https://quotes.toscrape.com/author/Khaled-Hosseini": {
-            "frequency": 1,
-            "positions": [
-                241
-            ]
-        }
-    },
-    "apprent": {
-        "https://quotes.toscrape.com/author/Mark-Twain": {
-            "frequency": 1,
-            "positions": [
-                72
-            ]
-        }
-    },
-    "printer": {
-        "https://quotes.toscrape.com/author/Mark-Twain": {
-            "frequency": 2,
-            "positions": [
-                75,
-                96
-            ]
-        }
-    },
-    "typesett": {
-        "https://quotes.toscrape.com/author/Mark-Twain": {
-            "frequency": 1,
-            "positions": [
-                81
-            ]
-        }
-    },
-    "orion": {
-        "https://quotes.toscrape.com/author/Mark-Twain": {
-            "frequency": 2,
-            "positions": [
-                89,
-                115
-            ]
-        }
-    },
-    "toil": {
-        "https://quotes.toscrape.com/author/Mark-Twain": {
-            "frequency": 1,
-            "positions": [
-                93
-            ]
-        }
-    },
-    "citi": {
-        "https://quotes.toscrape.com/author/Mark-Twain": {
-            "frequency": 1,
-            "positions": [
-                99
-            ]
-        },
-        "https://quotes.toscrape.com/author/Ernest-Hemingway": {
-            "frequency": 1,
-            "positions": [
-                127
-            ]
-        },
-        "https://quotes.toscrape.com/author/Madeleine-LEngle": {
-            "frequency": 4,
-            "positions": [
-                10,
-                109,
-                323,
-                354
-            ]
-        },
-        "https://quotes.toscrape.com/author/Garrison-Keillor": {
-            "frequency": 1,
-            "positions": [
-                456
-            ]
-        },
-        "https://quotes.toscrape.com/author/Suzanne-Collins": {
-            "frequency": 1,
-            "positions": [
-                166
-            ]
-        },
-        "https://quotes.toscrape.com/author/Charles-Bukowski": {
-            "frequency": 4,
-            "positions": [
-                43,
-                127,
-                141,
-                247
-            ]
-        },
-        "https://quotes.toscrape.com/author/James-Baldwin": {
-            "frequency": 2,
-            "positions": [
-                195,
-                338
-            ]
-        },
-        "https://quotes.toscrape.com/author/John-Lennon": {
-            "frequency": 1,
-            "positions": [
-                168
-            ]
-        },
-        "https://quotes.toscrape.com/author/Ayn-Rand": {
-            "frequency": 1,
-            "positions": [
-                47
-            ]
-        }
-    },
-    "master": {
-        "https://quotes.toscrape.com/author/Mark-Twain": {
-            "frequency": 1,
-            "positions": [
-                103
-            ]
-        }
-    },
-    "riverboat": {
-        "https://quotes.toscrape.com/author/Mark-Twain": {
-            "frequency": 1,
-            "positions": [
-                104
-            ]
-        }
-    },
-    "pilot": {
-        "https://quotes.toscrape.com/author/Mark-Twain": {
-            "frequency": 1,
-            "positions": [
-                105
-            ]
-        },
-        "https://quotes.toscrape.com/author/George-R-R-Martin": {
-            "frequency": 1,
-            "positions": [
-                318
-            ]
-        }
-    },
-    "mississippi": {
-        "https://quotes.toscrape.com/author/Mark-Twain": {
-            "frequency": 1,
-            "positions": [
-                108
-            ]
-        },
-        "https://quotes.toscrape.com/author/Jim-Henson": {
-            "frequency": 1,
-            "positions": [
-                8
-            ]
-        }
-    },
-    "river": {
-        "https://quotes.toscrape.com/author/Mark-Twain": {
-            "frequency": 1,
-            "positions": [
-                109
-            ]
-        }
-    },
-    "west": {
-        "https://quotes.toscrape.com/author/Mark-Twain": {
-            "frequency": 1,
-            "positions": [
-                112
-            ]
-        },
-        "https://quotes.toscrape.com/author/Haruki-Murakami": {
-            "frequency": 1,
-            "positions": [
-                255
-            ]
-        },
-        "https://quotes.toscrape.com/author/Ernest-Hemingway": {
-            "frequency": 1,
-            "positions": [
-                341
-            ]
-        },
-        "https://quotes.toscrape.com/author/George-R-R-Martin": {
-            "frequency": 1,
-            "positions": [
-                371
-            ]
-        }
-    },
-    "mine": {
-        "https://quotes.toscrape.com/author/Mark-Twain": {
-            "frequency": 1,
-            "positions": [
-                122
-            ]
-        }
-    },
-    "journal": {
-        "https://quotes.toscrape.com/author/Mark-Twain": {
-            "frequency": 1,
-            "positions": [
-                128
-            ]
-        },
-        "https://quotes.toscrape.com/author/George-Bernard-Shaw": {
-            "frequency": 1,
-            "positions": [
-                49
-            ]
-        },
-        "https://quotes.toscrape.com/author/Ralph-Waldo-Emerson": {
-            "frequency": 1,
-            "positions": [
-                285
-            ]
-        },
-        "https://quotes.toscrape.com/author/Jorge-Luis-Borges": {
-            "frequency": 1,
-            "positions": [
-                69
-            ]
-        },
-        "https://quotes.toscrape.com/author/Madeleine-LEngle": {
-            "frequency": 1,
-            "positions": [
-                127
-            ]
-        },
-        "https://quotes.toscrape.com/author/George-R-R-Martin": {
-            "frequency": 3,
-            "positions": [
-                138,
-                157,
-                198
-            ]
-        },
-        "https://quotes.toscrape.com/author/Harper-Lee": {
-            "frequency": 1,
-            "positions": [
-                357
-            ]
-        }
-    },
-    "jump": {
-        "https://quotes.toscrape.com/author/Mark-Twain": {
-            "frequency": 1,
-            "positions": [
-                139
-            ]
-        },
-        "https://quotes.toscrape.com/tag/humor/page/2": {
-            "frequency": 1,
-            "positions": [
-                23
-            ]
-        },
-        "https://quotes.toscrape.com/tag/love/page/2": {
-            "frequency": 1,
-            "positions": [
-                127
-            ]
-        },
-        "https://quotes.toscrape.com/tag/romantic": {
-            "frequency": 1,
-            "positions": [
-                8
-            ]
-        },
-        "https://quotes.toscrape.com/tag/women": {
-            "frequency": 1,
-            "positions": [
-                8
-            ]
-        },
-        "https://quotes.toscrape.com/page/9": {
-            "frequency": 1,
-            "positions": [
-                23
-            ]
-        }
-    },
-    "frog": {
-        "https://quotes.toscrape.com/author/Mark-Twain": {
-            "frequency": 1,
-            "positions": [
-                140
-            ]
-        }
-    },
-    "calavera": {
-        "https://quotes.toscrape.com/author/Mark-Twain": {
-            "frequency": 1,
-            "positions": [
-                142
-            ]
-        }
-    },
-    "counti": {
-        "https://quotes.toscrape.com/author/Mark-Twain": {
-            "frequency": 1,
-            "positions": [
-                143
-            ]
-        },
-        "https://quotes.toscrape.com/author/George-Bernard-Shaw": {
-            "frequency": 1,
-            "positions": [
-                183
-            ]
-        },
-        "https://quotes.toscrape.com/author/George-R-R-Martin": {
-            "frequency": 1,
-            "positions": [
-                178
-            ]
-        }
-    },
-    "nationwid": {
-        "https://quotes.toscrape.com/author/Mark-Twain": {
-            "frequency": 1,
-            "positions": [
-                153
-            ]
-        }
-    },
-    "travelogu": {
-        "https://quotes.toscrape.com/author/Mark-Twain": {
-            "frequency": 1,
-            "positions": [
-                156
-            ]
-        }
-    },
-    "wit": {
-        "https://quotes.toscrape.com/author/Mark-Twain": {
-            "frequency": 1,
-            "positions": [
-                177
-            ]
-        },
-        "https://quotes.toscrape.com/author/John-Lennon": {
-            "frequency": 1,
-            "positions": [
-                142
-            ]
-        }
-    },
-    "satir": {
-        "https://quotes.toscrape.com/author/Mark-Twain": {
-            "frequency": 1,
-            "positions": [
-                179
-            ]
-        },
-        "https://quotes.toscrape.com/author/George-Carlin": {
-            "frequency": 1,
-            "positions": [
-                129
-            ]
-        }
-    },
-    "peer": {
-        "https://quotes.toscrape.com/author/Mark-Twain": {
-            "frequency": 1,
-            "positions": [
-                185
-            ]
-        }
-    },
-    "industrialist": {
-        "https://quotes.toscrape.com/author/Mark-Twain": {
-            "frequency": 1,
-            "positions": [
-                194
-            ]
-        }
-    },
-    "european": {
-        "https://quotes.toscrape.com/author/Mark-Twain": {
-            "frequency": 1,
-            "positions": [
-                196
-            ]
-        }
-    },
-    "royalti": {
-        "https://quotes.toscrape.com/author/Mark-Twain": {
-            "frequency": 1,
-            "positions": [
-                197
-            ]
-        }
-    },
-    "acumen": {
-        "https://quotes.toscrape.com/author/Mark-Twain": {
-            "frequency": 1,
-            "positions": [
-                202
-            ]
-        }
-    },
-    "squander": {
-        "https://quotes.toscrape.com/author/Mark-Twain": {
-            "frequency": 1,
-            "positions": [
-                217
-            ]
-        }
-    },
-    "ventur": {
-        "https://quotes.toscrape.com/author/Mark-Twain": {
-            "frequency": 1,
-            "positions": [
-                221
-            ]
-        }
-    },
-    "paig": {
-        "https://quotes.toscrape.com/author/Mark-Twain": {
-            "frequency": 1,
-            "positions": [
-                225
-            ]
-        }
-    },
-    "compositor": {
-        "https://quotes.toscrape.com/author/Mark-Twain": {
-            "frequency": 1,
-            "positions": [
-                226
-            ]
-        }
-    },
-    "bankruptci": {
-        "https://quotes.toscrape.com/author/Mark-Twain": {
-            "frequency": 2,
-            "positions": [
-                232,
-                264
-            ]
-        }
-    },
-    "huttleston": {
-        "https://quotes.toscrape.com/author/Mark-Twain": {
-            "frequency": 1,
-            "positions": [
-                238
-            ]
-        }
-    },
-    "roger": {
-        "https://quotes.toscrape.com/author/Mark-Twain": {
-            "frequency": 1,
-            "positions": [
-                239
-            ]
-        }
-    },
-    "overcam": {
-        "https://quotes.toscrape.com/author/Mark-Twain": {
-            "frequency": 1,
-            "positions": [
-                243
-            ]
-        }
-    },
-    "hard": {
-        "https://quotes.toscrape.com/author/Mark-Twain": {
-            "frequency": 1,
-            "positions": [
-                249
-            ]
-        }
-    },
-    "ensur": {
-        "https://quotes.toscrape.com/author/Mark-Twain": {
-            "frequency": 1,
-            "positions": [
-                251
-            ]
-        },
-        "https://quotes.toscrape.com/author/Alexandre-Dumas-fils": {
-            "frequency": 1,
-            "positions": [
-                43
-            ]
-        }
-    },
-    "creditor": {
-        "https://quotes.toscrape.com/author/Mark-Twain": {
-            "frequency": 1,
-            "positions": [
-                256
-            ]
-        }
-    },
-    "paid": {
-        "https://quotes.toscrape.com/author/Mark-Twain": {
-            "frequency": 1,
-            "positions": [
-                258
-            ]
-        },
-        "https://quotes.toscrape.com/author/Dr-Seuss": {
-            "frequency": 1,
-            "positions": [
-                401
-            ]
-        }
-    },
-    "reliev": {
-        "https://quotes.toscrape.com/author/Mark-Twain": {
-            "frequency": 1,
-            "positions": [
-                266
-            ]
-        }
-    },
-    "legal": {
-        "https://quotes.toscrape.com/author/Mark-Twain": {
-            "frequency": 1,
-            "positions": [
-                270
-            ]
-        },
-        "https://quotes.toscrape.com/author/J-D-Salinger": {
-            "frequency": 1,
-            "positions": [
-                246
-            ]
-        },
-        "https://quotes.toscrape.com/author/Pablo-Neruda": {
-            "frequency": 1,
-            "positions": [
-                18
-            ]
-        },
-        "https://quotes.toscrape.com/author/George-R-R-Martin": {
-            "frequency": 1,
-            "positions": [
-                179
-            ]
-        },
-        "https://quotes.toscrape.com/author/Alexandre-Dumas-fils": {
-            "frequency": 1,
-            "positions": [
-                39
-            ]
-        }
-    },
-    "halley": {
-        "https://quotes.toscrape.com/author/Mark-Twain": {
-            "frequency": 1,
-            "positions": [
-                277
-            ]
-        }
-    },
-    "comet": {
-        "https://quotes.toscrape.com/author/Mark-Twain": {
-            "frequency": 1,
-            "positions": [
-                279
-            ]
-        }
-    },
-    "return": {
-        "https://quotes.toscrape.com/author/Mark-Twain": {
-            "frequency": 1,
-            "positions": [
-                284
-            ]
-        },
-        "https://quotes.toscrape.com/author/Dr-Seuss": {
-            "frequency": 1,
-            "positions": [
-                57
-            ]
-        },
-        "https://quotes.toscrape.com/author/Ralph-Waldo-Emerson": {
-            "frequency": 1,
-            "positions": [
-                125
-            ]
-        },
-        "https://quotes.toscrape.com/author/Jorge-Luis-Borges": {
-            "frequency": 1,
-            "positions": [
-                54
-            ]
-        },
-        "https://quotes.toscrape.com/author/Ernest-Hemingway": {
-            "frequency": 2,
-            "positions": [
-                151,
-                235
-            ]
-        },
-        "https://quotes.toscrape.com/author/Garrison-Keillor": {
-            "frequency": 1,
-            "positions": [
-                330
-            ]
-        },
-        "https://quotes.toscrape.com/author/Pablo-Neruda": {
-            "frequency": 1,
-            "positions": [
-                205
-            ]
-        },
-        "https://quotes.toscrape.com/author/James-Baldwin": {
-            "frequency": 1,
-            "positions": [
-                175
-            ]
-        },
-        "https://quotes.toscrape.com/author/Khaled-Hosseini": {
-            "frequency": 2,
-            "positions": [
-                43,
-                84
-            ]
-        },
-        "https://quotes.toscrape.com/author/Ayn-Rand": {
-            "frequency": 1,
-            "positions": [
-                44
-            ]
-        }
-    },
-    "laud": {
-        "https://quotes.toscrape.com/author/Mark-Twain": {
-            "frequency": 1,
-            "positions": [
-                287
-            ]
-        },
-        "https://quotes.toscrape.com/author/George-R-R-Martin": {
-            "frequency": 1,
-            "positions": [
-                147
-            ]
-        }
-    },
-    "faulkner": {
-        "https://quotes.toscrape.com/author/Mark-Twain": {
-            "frequency": 1,
-            "positions": [
-                298
-            ]
-        }
-    },
-    "excerpt": {
-        "https://quotes.toscrape.com/author/Mark-Twain": {
-            "frequency": 1,
-            "positions": [
-                306
             ]
         }
     },
@@ -94258,6 +93410,70 @@
             ]
         }
     },
+    "return": {
+        "https://quotes.toscrape.com/author/Dr-Seuss": {
+            "frequency": 1,
+            "positions": [
+                57
+            ]
+        },
+        "https://quotes.toscrape.com/author/Ralph-Waldo-Emerson": {
+            "frequency": 1,
+            "positions": [
+                125
+            ]
+        },
+        "https://quotes.toscrape.com/author/Jorge-Luis-Borges": {
+            "frequency": 1,
+            "positions": [
+                54
+            ]
+        },
+        "https://quotes.toscrape.com/author/Ernest-Hemingway": {
+            "frequency": 2,
+            "positions": [
+                151,
+                235
+            ]
+        },
+        "https://quotes.toscrape.com/author/Garrison-Keillor": {
+            "frequency": 1,
+            "positions": [
+                330
+            ]
+        },
+        "https://quotes.toscrape.com/author/Pablo-Neruda": {
+            "frequency": 1,
+            "positions": [
+                205
+            ]
+        },
+        "https://quotes.toscrape.com/author/James-Baldwin": {
+            "frequency": 1,
+            "positions": [
+                175
+            ]
+        },
+        "https://quotes.toscrape.com/author/Mark-Twain": {
+            "frequency": 1,
+            "positions": [
+                284
+            ]
+        },
+        "https://quotes.toscrape.com/author/Khaled-Hosseini": {
+            "frequency": 2,
+            "positions": [
+                43,
+                84
+            ]
+        },
+        "https://quotes.toscrape.com/author/Ayn-Rand": {
+            "frequency": 1,
+            "positions": [
+                44
+            ]
+        }
+    },
     "europ": {
         "https://quotes.toscrape.com/author/Dr-Seuss": {
             "frequency": 2,
@@ -95232,6 +94448,20 @@
             ]
         }
     },
+    "paid": {
+        "https://quotes.toscrape.com/author/Dr-Seuss": {
+            "frequency": 1,
+            "positions": [
+                401
+            ]
+        },
+        "https://quotes.toscrape.com/author/Mark-Twain": {
+            "frequency": 1,
+            "positions": [
+                258
+            ]
+        }
+    },
     "1967": {
         "https://quotes.toscrape.com/author/Dr-Seuss": {
             "frequency": 1,
@@ -95496,6 +94726,52 @@
             "frequency": 1,
             "positions": [
                 190
+            ]
+        }
+    },
+    "journal": {
+        "https://quotes.toscrape.com/author/George-Bernard-Shaw": {
+            "frequency": 1,
+            "positions": [
+                49
+            ]
+        },
+        "https://quotes.toscrape.com/author/Ralph-Waldo-Emerson": {
+            "frequency": 1,
+            "positions": [
+                285
+            ]
+        },
+        "https://quotes.toscrape.com/author/Jorge-Luis-Borges": {
+            "frequency": 1,
+            "positions": [
+                69
+            ]
+        },
+        "https://quotes.toscrape.com/author/Madeleine-LEngle": {
+            "frequency": 1,
+            "positions": [
+                127
+            ]
+        },
+        "https://quotes.toscrape.com/author/George-R-R-Martin": {
+            "frequency": 3,
+            "positions": [
+                138,
+                157,
+                198
+            ]
+        },
+        "https://quotes.toscrape.com/author/Mark-Twain": {
+            "frequency": 1,
+            "positions": [
+                128
+            ]
+        },
+        "https://quotes.toscrape.com/author/Harper-Lee": {
+            "frequency": 1,
+            "positions": [
+                357
             ]
         }
     },
@@ -95831,6 +95107,26 @@
             "frequency": 1,
             "positions": [
                 291
+            ]
+        }
+    },
+    "counti": {
+        "https://quotes.toscrape.com/author/George-Bernard-Shaw": {
+            "frequency": 1,
+            "positions": [
+                183
+            ]
+        },
+        "https://quotes.toscrape.com/author/George-R-R-Martin": {
+            "frequency": 1,
+            "positions": [
+                178
+            ]
+        },
+        "https://quotes.toscrape.com/author/Mark-Twain": {
+            "frequency": 1,
+            "positions": [
+                143
             ]
         }
     },
@@ -98086,6 +97382,38 @@
             ]
         }
     },
+    "grew": {
+        "https://quotes.toscrape.com/author/Haruki-Murakami": {
+            "frequency": 1,
+            "positions": [
+                62
+            ]
+        },
+        "https://quotes.toscrape.com/author/Madeleine-LEngle": {
+            "frequency": 1,
+            "positions": [
+                386
+            ]
+        },
+        "https://quotes.toscrape.com/author/Charles-Bukowski": {
+            "frequency": 1,
+            "positions": [
+                118
+            ]
+        },
+        "https://quotes.toscrape.com/author/William-Nicholson": {
+            "frequency": 1,
+            "positions": [
+                41
+            ]
+        },
+        "https://quotes.toscrape.com/author/Mark-Twain": {
+            "frequency": 1,
+            "positions": [
+                54
+            ]
+        }
+    },
     "kurt": {
         "https://quotes.toscrape.com/author/Haruki-Murakami": {
             "frequency": 1,
@@ -98498,6 +97826,32 @@
             ]
         }
     },
+    "west": {
+        "https://quotes.toscrape.com/author/Haruki-Murakami": {
+            "frequency": 1,
+            "positions": [
+                255
+            ]
+        },
+        "https://quotes.toscrape.com/author/Ernest-Hemingway": {
+            "frequency": 1,
+            "positions": [
+                341
+            ]
+        },
+        "https://quotes.toscrape.com/author/George-R-R-Martin": {
+            "frequency": 1,
+            "positions": [
+                371
+            ]
+        },
+        "https://quotes.toscrape.com/author/Mark-Twain": {
+            "frequency": 1,
+            "positions": [
+                112
+            ]
+        }
+    },
     "sun": {
         "https://quotes.toscrape.com/author/Haruki-Murakami": {
             "frequency": 1,
@@ -98663,6 +98017,69 @@
             "frequency": 1,
             "positions": [
                 126
+            ]
+        }
+    },
+    "citi": {
+        "https://quotes.toscrape.com/author/Ernest-Hemingway": {
+            "frequency": 1,
+            "positions": [
+                127
+            ]
+        },
+        "https://quotes.toscrape.com/author/Madeleine-LEngle": {
+            "frequency": 4,
+            "positions": [
+                10,
+                109,
+                323,
+                354
+            ]
+        },
+        "https://quotes.toscrape.com/author/Garrison-Keillor": {
+            "frequency": 1,
+            "positions": [
+                456
+            ]
+        },
+        "https://quotes.toscrape.com/author/Suzanne-Collins": {
+            "frequency": 1,
+            "positions": [
+                166
+            ]
+        },
+        "https://quotes.toscrape.com/author/Charles-Bukowski": {
+            "frequency": 4,
+            "positions": [
+                43,
+                127,
+                141,
+                247
+            ]
+        },
+        "https://quotes.toscrape.com/author/James-Baldwin": {
+            "frequency": 2,
+            "positions": [
+                195,
+                338
+            ]
+        },
+        "https://quotes.toscrape.com/author/John-Lennon": {
+            "frequency": 1,
+            "positions": [
+                168
+            ]
+        },
+        "https://quotes.toscrape.com/author/Mark-Twain": {
+            "frequency": 1,
+            "positions": [
+                99
+            ]
+        },
+        "https://quotes.toscrape.com/author/Ayn-Rand": {
+            "frequency": 1,
+            "positions": [
+                47
             ]
         }
     },
@@ -99220,6 +98637,26 @@
             ]
         }
     },
+    "florida": {
+        "https://quotes.toscrape.com/author/Ernest-Hemingway": {
+            "frequency": 1,
+            "positions": [
+                342
+            ]
+        },
+        "https://quotes.toscrape.com/author/Madeleine-LEngle": {
+            "frequency": 1,
+            "positions": [
+                206
+            ]
+        },
+        "https://quotes.toscrape.com/author/Mark-Twain": {
+            "frequency": 1,
+            "positions": [
+                7
+            ]
+        }
+    },
     "cuba": {
         "https://quotes.toscrape.com/author/Ernest-Hemingway": {
             "frequency": 2,
@@ -99598,6 +99035,38 @@
             "frequency": 1,
             "positions": [
                 242
+            ]
+        }
+    },
+    "legal": {
+        "https://quotes.toscrape.com/author/J-D-Salinger": {
+            "frequency": 1,
+            "positions": [
+                246
+            ]
+        },
+        "https://quotes.toscrape.com/author/Pablo-Neruda": {
+            "frequency": 1,
+            "positions": [
+                18
+            ]
+        },
+        "https://quotes.toscrape.com/author/George-R-R-Martin": {
+            "frequency": 1,
+            "positions": [
+                179
+            ]
+        },
+        "https://quotes.toscrape.com/author/Mark-Twain": {
+            "frequency": 1,
+            "positions": [
+                270
+            ]
+        },
+        "https://quotes.toscrape.com/author/Alexandre-Dumas-fils": {
+            "frequency": 1,
+            "positions": [
+                39
             ]
         }
     },
@@ -100835,6 +100304,21 @@
             ]
         }
     },
+    "humorist": {
+        "https://quotes.toscrape.com/author/Garrison-Keillor": {
+            "frequency": 1,
+            "positions": [
+                31
+            ]
+        },
+        "https://quotes.toscrape.com/author/Mark-Twain": {
+            "frequency": 2,
+            "positions": [
+                29,
+                292
+            ]
+        }
+    },
     "columnist": {
         "https://quotes.toscrape.com/author/Garrison-Keillor": {
             "frequency": 1,
@@ -101691,6 +101175,32 @@
             ]
         }
     },
+    "provid": {
+        "https://quotes.toscrape.com/author/Garrison-Keillor": {
+            "frequency": 1,
+            "positions": [
+                417
+            ]
+        },
+        "https://quotes.toscrape.com/author/James-Baldwin": {
+            "frequency": 1,
+            "positions": [
+                288
+            ]
+        },
+        "https://quotes.toscrape.com/author/Mark-Twain": {
+            "frequency": 1,
+            "positions": [
+                62
+            ]
+        },
+        "https://quotes.toscrape.com/author/Khaled-Hosseini": {
+            "frequency": 1,
+            "positions": [
+                241
+            ]
+        }
+    },
     "vocal": {
         "https://quotes.toscrape.com/author/Garrison-Keillor": {
             "frequency": 1,
@@ -102116,6 +101626,20 @@
             "frequency": 1,
             "positions": [
                 7
+            ]
+        }
+    },
+    "mississippi": {
+        "https://quotes.toscrape.com/author/Jim-Henson": {
+            "frequency": 1,
+            "positions": [
+                8
+            ]
+        },
+        "https://quotes.toscrape.com/author/Mark-Twain": {
+            "frequency": 1,
+            "positions": [
+                108
             ]
         }
     },
@@ -104495,6 +104019,20 @@
             ]
         }
     },
+    "satir": {
+        "https://quotes.toscrape.com/author/George-Carlin": {
+            "frequency": 1,
+            "positions": [
+                129
+            ]
+        },
+        "https://quotes.toscrape.com/author/Mark-Twain": {
+            "frequency": 1,
+            "positions": [
+                179
+            ]
+        }
+    },
     "excess": {
         "https://quotes.toscrape.com/author/George-Carlin": {
             "frequency": 1,
@@ -104683,6 +104221,44 @@
             "frequency": 1,
             "positions": [
                 21
+            ]
+        }
+    },
+    "jump": {
+        "https://quotes.toscrape.com/tag/humor/page/2": {
+            "frequency": 1,
+            "positions": [
+                23
+            ]
+        },
+        "https://quotes.toscrape.com/tag/love/page/2": {
+            "frequency": 1,
+            "positions": [
+                127
+            ]
+        },
+        "https://quotes.toscrape.com/author/Mark-Twain": {
+            "frequency": 1,
+            "positions": [
+                139
+            ]
+        },
+        "https://quotes.toscrape.com/tag/romantic": {
+            "frequency": 1,
+            "positions": [
+                8
+            ]
+        },
+        "https://quotes.toscrape.com/tag/women": {
+            "frequency": 1,
+            "positions": [
+                8
+            ]
+        },
+        "https://quotes.toscrape.com/page/9": {
+            "frequency": 1,
+            "positions": [
+                23
             ]
         }
     },
@@ -108401,6 +107977,20 @@
             ]
         }
     },
+    "laud": {
+        "https://quotes.toscrape.com/author/George-R-R-Martin": {
+            "frequency": 1,
+            "positions": [
+                147
+            ]
+        },
+        "https://quotes.toscrape.com/author/Mark-Twain": {
+            "frequency": 1,
+            "positions": [
+                287
+            ]
+        }
+    },
     "objector": {
         "https://quotes.toscrape.com/author/George-R-R-Martin": {
             "frequency": 1,
@@ -108657,6 +108247,20 @@
             "frequency": 1,
             "positions": [
                 316
+            ]
+        }
+    },
+    "pilot": {
+        "https://quotes.toscrape.com/author/George-R-R-Martin": {
+            "frequency": 1,
+            "positions": [
+                318
+            ]
+        },
+        "https://quotes.toscrape.com/author/Mark-Twain": {
+            "frequency": 1,
+            "positions": [
+                105
             ]
         }
     },
@@ -109513,6 +109117,20 @@
             ]
         }
     },
+    "wit": {
+        "https://quotes.toscrape.com/author/John-Lennon": {
+            "frequency": 1,
+            "positions": [
+                142
+            ]
+        },
+        "https://quotes.toscrape.com/author/Mark-Twain": {
+            "frequency": 1,
+            "positions": [
+                177
+            ]
+        }
+    },
     "vietnam": {
         "https://quotes.toscrape.com/author/John-Lennon": {
             "frequency": 1,
@@ -109696,6 +109314,388 @@
             "frequency": 1,
             "positions": [
                 321
+            ]
+        }
+    },
+    "1835": {
+        "https://quotes.toscrape.com/author/Mark-Twain": {
+            "frequency": 1,
+            "positions": [
+                5
+            ]
+        }
+    },
+    "missouri": {
+        "https://quotes.toscrape.com/author/Mark-Twain": {
+            "frequency": 2,
+            "positions": [
+                8,
+                58
+            ]
+        }
+    },
+    "samuel": {
+        "https://quotes.toscrape.com/author/Mark-Twain": {
+            "frequency": 1,
+            "positions": [
+                13
+            ]
+        }
+    },
+    "langhorn": {
+        "https://quotes.toscrape.com/author/Mark-Twain": {
+            "frequency": 1,
+            "positions": [
+                14
+            ]
+        }
+    },
+    "clemen": {
+        "https://quotes.toscrape.com/author/Mark-Twain": {
+            "frequency": 1,
+            "positions": [
+                15
+            ]
+        }
+    },
+    "huckleberri": {
+        "https://quotes.toscrape.com/author/Mark-Twain": {
+            "frequency": 2,
+            "positions": [
+                38,
+                66
+            ]
+        }
+    },
+    "finn": {
+        "https://quotes.toscrape.com/author/Mark-Twain": {
+            "frequency": 2,
+            "positions": [
+                39,
+                67
+            ]
+        }
+    },
+    "1885": {
+        "https://quotes.toscrape.com/author/Mark-Twain": {
+            "frequency": 1,
+            "positions": [
+                40
+            ]
+        }
+    },
+    "tom": {
+        "https://quotes.toscrape.com/author/Mark-Twain": {
+            "frequency": 2,
+            "positions": [
+                50,
+                69
+            ]
+        }
+    },
+    "sawyer": {
+        "https://quotes.toscrape.com/author/Mark-Twain": {
+            "frequency": 2,
+            "positions": [
+                51,
+                70
+            ]
+        }
+    },
+    "1876": {
+        "https://quotes.toscrape.com/author/Mark-Twain": {
+            "frequency": 1,
+            "positions": [
+                52
+            ]
+        }
+    },
+    "hannib": {
+        "https://quotes.toscrape.com/author/Mark-Twain": {
+            "frequency": 1,
+            "positions": [
+                57
+            ]
+        }
+    },
+    "apprent": {
+        "https://quotes.toscrape.com/author/Mark-Twain": {
+            "frequency": 1,
+            "positions": [
+                72
+            ]
+        }
+    },
+    "printer": {
+        "https://quotes.toscrape.com/author/Mark-Twain": {
+            "frequency": 2,
+            "positions": [
+                75,
+                96
+            ]
+        }
+    },
+    "typesett": {
+        "https://quotes.toscrape.com/author/Mark-Twain": {
+            "frequency": 1,
+            "positions": [
+                81
+            ]
+        }
+    },
+    "orion": {
+        "https://quotes.toscrape.com/author/Mark-Twain": {
+            "frequency": 2,
+            "positions": [
+                89,
+                115
+            ]
+        }
+    },
+    "toil": {
+        "https://quotes.toscrape.com/author/Mark-Twain": {
+            "frequency": 1,
+            "positions": [
+                93
+            ]
+        }
+    },
+    "master": {
+        "https://quotes.toscrape.com/author/Mark-Twain": {
+            "frequency": 1,
+            "positions": [
+                103
+            ]
+        }
+    },
+    "riverboat": {
+        "https://quotes.toscrape.com/author/Mark-Twain": {
+            "frequency": 1,
+            "positions": [
+                104
+            ]
+        }
+    },
+    "river": {
+        "https://quotes.toscrape.com/author/Mark-Twain": {
+            "frequency": 1,
+            "positions": [
+                109
+            ]
+        }
+    },
+    "mine": {
+        "https://quotes.toscrape.com/author/Mark-Twain": {
+            "frequency": 1,
+            "positions": [
+                122
+            ]
+        }
+    },
+    "frog": {
+        "https://quotes.toscrape.com/author/Mark-Twain": {
+            "frequency": 1,
+            "positions": [
+                140
+            ]
+        }
+    },
+    "calavera": {
+        "https://quotes.toscrape.com/author/Mark-Twain": {
+            "frequency": 1,
+            "positions": [
+                142
+            ]
+        }
+    },
+    "nationwid": {
+        "https://quotes.toscrape.com/author/Mark-Twain": {
+            "frequency": 1,
+            "positions": [
+                153
+            ]
+        }
+    },
+    "travelogu": {
+        "https://quotes.toscrape.com/author/Mark-Twain": {
+            "frequency": 1,
+            "positions": [
+                156
+            ]
+        }
+    },
+    "peer": {
+        "https://quotes.toscrape.com/author/Mark-Twain": {
+            "frequency": 1,
+            "positions": [
+                185
+            ]
+        }
+    },
+    "industrialist": {
+        "https://quotes.toscrape.com/author/Mark-Twain": {
+            "frequency": 1,
+            "positions": [
+                194
+            ]
+        }
+    },
+    "european": {
+        "https://quotes.toscrape.com/author/Mark-Twain": {
+            "frequency": 1,
+            "positions": [
+                196
+            ]
+        }
+    },
+    "royalti": {
+        "https://quotes.toscrape.com/author/Mark-Twain": {
+            "frequency": 1,
+            "positions": [
+                197
+            ]
+        }
+    },
+    "acumen": {
+        "https://quotes.toscrape.com/author/Mark-Twain": {
+            "frequency": 1,
+            "positions": [
+                202
+            ]
+        }
+    },
+    "squander": {
+        "https://quotes.toscrape.com/author/Mark-Twain": {
+            "frequency": 1,
+            "positions": [
+                217
+            ]
+        }
+    },
+    "ventur": {
+        "https://quotes.toscrape.com/author/Mark-Twain": {
+            "frequency": 1,
+            "positions": [
+                221
+            ]
+        }
+    },
+    "paig": {
+        "https://quotes.toscrape.com/author/Mark-Twain": {
+            "frequency": 1,
+            "positions": [
+                225
+            ]
+        }
+    },
+    "compositor": {
+        "https://quotes.toscrape.com/author/Mark-Twain": {
+            "frequency": 1,
+            "positions": [
+                226
+            ]
+        }
+    },
+    "bankruptci": {
+        "https://quotes.toscrape.com/author/Mark-Twain": {
+            "frequency": 2,
+            "positions": [
+                232,
+                264
+            ]
+        }
+    },
+    "huttleston": {
+        "https://quotes.toscrape.com/author/Mark-Twain": {
+            "frequency": 1,
+            "positions": [
+                238
+            ]
+        }
+    },
+    "roger": {
+        "https://quotes.toscrape.com/author/Mark-Twain": {
+            "frequency": 1,
+            "positions": [
+                239
+            ]
+        }
+    },
+    "overcam": {
+        "https://quotes.toscrape.com/author/Mark-Twain": {
+            "frequency": 1,
+            "positions": [
+                243
+            ]
+        }
+    },
+    "hard": {
+        "https://quotes.toscrape.com/author/Mark-Twain": {
+            "frequency": 1,
+            "positions": [
+                249
+            ]
+        }
+    },
+    "ensur": {
+        "https://quotes.toscrape.com/author/Mark-Twain": {
+            "frequency": 1,
+            "positions": [
+                251
+            ]
+        },
+        "https://quotes.toscrape.com/author/Alexandre-Dumas-fils": {
+            "frequency": 1,
+            "positions": [
+                43
+            ]
+        }
+    },
+    "creditor": {
+        "https://quotes.toscrape.com/author/Mark-Twain": {
+            "frequency": 1,
+            "positions": [
+                256
+            ]
+        }
+    },
+    "reliev": {
+        "https://quotes.toscrape.com/author/Mark-Twain": {
+            "frequency": 1,
+            "positions": [
+                266
+            ]
+        }
+    },
+    "halley": {
+        "https://quotes.toscrape.com/author/Mark-Twain": {
+            "frequency": 1,
+            "positions": [
+                277
+            ]
+        }
+    },
+    "comet": {
+        "https://quotes.toscrape.com/author/Mark-Twain": {
+            "frequency": 1,
+            "positions": [
+                279
+            ]
+        }
+    },
+    "faulkner": {
+        "https://quotes.toscrape.com/author/Mark-Twain": {
+            "frequency": 1,
+            "positions": [
+                298
+            ]
+        }
+    },
+    "excerpt": {
+        "https://quotes.toscrape.com/author/Mark-Twain": {
+            "frequency": 1,
+            "positions": [
+                306
             ]
         }
     },

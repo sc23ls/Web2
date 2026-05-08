@@ -2,7 +2,7 @@ import json
 
 import pytest
 
-from indexer import Indexer, IndexPersistenceError
+from src.indexer import Indexer, IndexPersistenceError
 
 
 def test_build_index_tracks_frequency_positions_and_multiple_pages():

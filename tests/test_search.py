@@ -1,6 +1,6 @@
 import math
 
-from search import Search
+from src.search import Search
 
 
 def test_find_returns_tfidf_ranked_intersection_results_and_prints_summary(capsys):

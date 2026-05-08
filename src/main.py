@@ -1,8 +1,8 @@
 """Command-line interface for building and querying the local search index."""
 
-from crawler import Crawler, CrawlerError
-from indexer import Indexer, IndexPersistenceError
-from search import Search, SearchError
+from src.crawler import Crawler, CrawlerError
+from src.indexer import Indexer, IndexPersistenceError
+from src.search import Search, SearchError
 
 
 def main() -> None:

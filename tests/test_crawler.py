@@ -1,7 +1,7 @@
 from unittest.mock import Mock
 import requests
 
-from crawler import Crawler, format_elapsed_time
+from src.crawler import Crawler, format_elapsed_time
 
 
 class FakeResponse:
@@ -166,7 +166,7 @@ def test_crawl_logs_request_errors_and_continues_without_raising(capsys):
 
 def test_crawl_uses_configured_delay(monkeypatch):
     sleep = Mock()
-    monkeypatch.setattr("crawler.time.sleep", sleep)
+    monkeypatch.setattr("src.crawler.time.sleep", sleep)
     session = FakeSession({"https://example.test": FakeResponse(quote_page())})
     crawler = Crawler(base_url="https://example.test", session=session, delay=0.25)
 
@@ -176,7 +176,7 @@ def test_crawl_uses_configured_delay(monkeypatch):
 
 
 def test_crawl_prints_elapsed_time_summary(monkeypatch, capsys):
-    monkeypatch.setattr("crawler.time.perf_counter", Mock(side_effect=[10, 1330]))
+    monkeypatch.setattr("src.crawler.time.perf_counter", Mock(side_effect=[10, 1330]))
     session = FakeSession({"https://example.test": FakeResponse(quote_page())})
     crawler = Crawler(base_url="https://example.test", session=session, delay=0)
 
