@@ -73,7 +73,7 @@ class Crawler:
         self,
         base_url: str = "https://quotes.toscrape.com",
         session: HttpSession | None = None,
-        delay: float = 1,
+        delay: float = 6,
         max_pages: int | None = None,
     ) -> None:
         self.base_url = self._normalize_url(base_url)
